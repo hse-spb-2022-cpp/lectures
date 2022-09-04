@@ -1,3 +1,7 @@
+CMakeCache.txt
+CMakeFiles/
+Makefile
+
 # Prerequisites
 *.d
 
