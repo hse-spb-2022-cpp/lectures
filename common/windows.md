@@ -53,6 +53,14 @@
 
 ## Установка Ubuntu
 Требуется Windows 10 или Windows 11.
+Выполните следующие команды в консоли от имени администратора:
+
+```bash
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+wsl --set-default-version 2
+```
+
 После этого [установите Ubuntu 22.04.1 из Microsoft Store](https://www.microsoft.com/p/ubuntu/9PN20MSR04DW) и запустите.
 Важно: **не** используйте команду `wsl --install`, она [пока не умеет устанавливать Ubuntu 22.04](https://github.com/microsoft/WSL/issues/8402).
 
