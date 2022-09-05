@@ -6,7 +6,7 @@ int main() {
     int a, b;
     a = 5;  // ok
     std::cin >> a >> b;
-    std::cout << a + b << std::endl;
+    std::cout << a + b << std::endl;  // like "\n", but flushes buffer, much slower
 
     // Alternative
     int s = a + b;  // declare variable right before it's needed please!

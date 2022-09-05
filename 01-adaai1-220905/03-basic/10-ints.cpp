@@ -34,7 +34,7 @@ int main() {
     }
     {
         std::cout << "===== unsigned long long =====\n";
-        long long a = 9'000'000'000'000'000'000;
+        unsigned long long a = 18'000'000'000'000'000'000U;  // need the 'U' suffix for big unsigned constants
         std::cout << a << "\n";
     }
 }
