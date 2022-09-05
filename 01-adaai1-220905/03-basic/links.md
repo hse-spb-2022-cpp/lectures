@@ -1,0 +1,1 @@
+https://notes.algoprog.ru/cpp/syntax.html

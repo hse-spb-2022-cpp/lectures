@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="c-vs-cpp.svg"
+   inkscape:export-filename="c-vs-cpp.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4912879"
+     inkscape:cx="430.50037"
+     inkscape:cy="303.76428"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Слой 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#ff0000;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;fill-opacity:0.50243902"
+       id="path63-9"
+       cx="95.407166"
+       cy="83.427193"
+       rx="68.216927"
+       ry="70.60054" />
+    <ellipse
+       style="fill:#00ff00;fill-opacity:0.5;stroke:#000000;stroke-width:1;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path1770"
+       cx="94.278374"
+       cy="99.61039"
+       rx="61.236931"
+       ry="39.282234" />
+    <ellipse
+       style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-opacity:1;stroke-dasharray:2, 1;fill-opacity:0.5;stroke-dashoffset:0"
+       id="path63"
+       cx="95.407295"
+       cy="80.684929"
+       rx="77.069466"
+       ry="47.964035" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:0.5;stroke:#000000;stroke-width:1;stroke-dasharray:2, 1;stroke-opacity:1;stroke-dashoffset:0"
+       id="path63-2"
+       cx="47.421764"
+       cy="80.684929"
+       rx="46.255539"
+       ry="39.982822" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+       x="125.47559"
+       y="78.555862"
+       id="text1031"><tspan
+         sodipodi:role="line"
+         id="tspan1029"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="125.47559"
+         y="78.555862">Стандартный</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="125.47559"
+         y="89.139198"
+         id="tspan402">C++</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+       x="8.7151146"
+       y="83.051712"
+       id="text1031-2"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.264583"
+         x="8.7151146"
+         y="83.051712"
+         id="tspan451">Стандартный C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583;stroke-opacity:1"
+       x="95.421074"
+       y="28.689692"
+       id="text1550-5"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="95.421074"
+         y="28.689692"
+         id="tspan1552-8">Реализованный C++</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.265;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="110.39988"
+       y="110.14897"
+       id="text1826"><tspan
+         sodipodi:role="line"
+         id="tspan1824"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0.265;stroke-dasharray:none"
+         x="110.39988"
+         y="110.14897">Изучаем</tspan></text>
+    <g
+       id="g1768"
+       transform="translate(-1.5054531,82.799921)"
+       style="stroke-width:0.265;stroke-dasharray:none">
+      <ellipse
+         style="fill:#ffffff;fill-opacity:0.634146;stroke:#000000;stroke-width:0.265;stroke-dasharray:none;stroke-opacity:1"
+         id="path507"
+         cx="73.641754"
+         cy="41.525417"
+         rx="25.708559"
+         ry="12.912206" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.265;stroke-opacity:1;stroke-dasharray:none"
+         x="73.265388"
+         y="40.145412"
+         id="text1550"><tspan
+           sodipodi:role="line"
+           id="tspan1548"
+           style="stroke-width:0.265;stroke-dasharray:none"
+           x="73.265388"
+           y="40.145412">Олимпиадный</tspan><tspan
+           sodipodi:role="line"
+           style="stroke-width:0.265;stroke-dasharray:none"
+           x="73.265388"
+           y="47.200962"
+           id="tspan1552">C++</tspan></text>
+    </g>
+  </g>
+</svg>

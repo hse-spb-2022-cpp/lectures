@@ -1,0 +1,2 @@
+float/double
+cout precision
