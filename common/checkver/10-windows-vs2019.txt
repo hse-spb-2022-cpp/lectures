@@ -1,0 +1,4 @@
+C++ 199711
+64-bit
+Detecting compiler... Microsoft Visual C++ 1933
+Detecting standard library... Microsoft STL: 143 at 202205

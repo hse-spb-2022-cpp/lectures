@@ -1,0 +1,4 @@
+C++ 201703
+64-bit
+Detecting compiler... GNU C 12.0.1
+Detecting standard library... GNU libstdc++: 20220319
