@@ -18,7 +18,7 @@
 1. Компилятор и стандартную библиотеку языка C++ (обычно идёт с компилятором). Один из: gcc, clang (проект LLVM), Apple Clang (только под macOS в составе Xcode), Visual C++ (ставится только в составе Visual Studio только под Windows), Intel C++ Compiler Classic, а лучше сразу все доступные.
 2. Инструмент Valgrind. Он есть только под Linux, под Windows и macOS его нет.
 3. Среду разработки (Integrated Development Environment, IDE) или хотя бы редактор с подсветкой синтаксиса.
-    * Самая мощная IDE — [CLion](https://www.jetbrains.com/ru-ru/clion/), под все ОС. Студенты могут получить полную версию бесплатно при помощи почты на `@edu.hse.ru`.
+    * Самая мощная IDE — [CLion](https://www.jetbrains.com/ru-ru/clion/), под все ОС. Студенты могут получить полную версию бесплатно при помощи почты на `@edu.hse.ru` (надо запросить на свой аккаунт, [инструкция](https://www.jetbrains.com/community/education/#students)).
     * Другая самая мощная IDE — Visual Studio. Только под Windows, только вместе с компилятором Visual C++.
     * Популярные редакторы: [Visual Studio Code](https://code.visualstudio.com/) (кроссплатформенный, не путать с Visual Studio), [Sublime Text](https://www.sublimetext.com/) (платный), vim (сложный), emacs (тоже сложный, но по-другому). У каждого свои приколы.
 4. Если у вас не Ubuntu 22.04 — виртуальную машину с Ubuntu 22.04 или, на Windows, Windows Subsystem for Linux (WSL). Чтобы можно было поставить ровно такую же среду, как в тестирующей системе.
