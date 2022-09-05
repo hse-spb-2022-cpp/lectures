@@ -69,6 +69,7 @@
 
 ### Дополнительно: установка Intel C++ Compiler Classic
 TODO: ставится как часть [Intel openAPI Base Toolkit](https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html)
+Если не грузится - это санкции, попробуйте через VPN.
 
 ### Дополнительно: установка Boost
 TODO

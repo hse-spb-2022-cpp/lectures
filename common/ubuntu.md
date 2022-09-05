@@ -22,7 +22,8 @@
     ```
 5. При желании также установите компилятор Intel C++ Compiler (не путать с Intel DPC++ Compiler).
    Он ставится как часть Intel oneAPI Base Toolkit:
-   1. Добавьте новый репозиторий [вот так](https://www.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/top/installation/install-using-package-managers/apt.html) ("Pre-installation Steps")
+   1. Добавьте новый репозиторий [вот так](https://www.intel.com/content/www/us/en/develop/documentation/installation-guide-for-intel-oneapi-toolkits-linux/top/installation/install-using-package-managers/apt.html) ("Pre-installation Steps").
+      Если не грузится - это санкции, попробуйте через VPN.
    2. Установите командой `sudo apt update && sudo apt install intel-oneapi-compiler-dpcpp-cpp-and-cpp-classic`
    3. Для запуска настройте окружение в текущей консоли командой `. /opt/intel/oneapi/setvars.sh` и запускайте компилятор командой `icc`.
 6. Для конкретных домашних заданий установите:
