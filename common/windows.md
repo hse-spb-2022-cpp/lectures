@@ -57,6 +57,9 @@
 На всех компьютерах это делается немного по-разному, но обычно надо перезагрузиться, при загрузке нажимать Del/Esc/Enter,
 зайти в биос, там найти настройку с таким названием и поставить из "Off"/"Disabled" в "On"/"Enabled", сохранить.
 
+Дальше идёт пересказ [инструкции по ручной установке WSL](https://docs.microsoft.com/ru-ru/windows/wsl/install-manual).
+Автоматическая через команду `wsl --install` **не подходит**, она [пока не умеет устанавливать Ubuntu 22.04](https://github.com/microsoft/WSL/issues/8402).
+
 Выполните следующие команды в консоли от имени администратора:
 
 ```bash
@@ -64,16 +67,15 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
-Затем перезагрузите компьютер и введите команду:
+Затем установите [вот это](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi), перезагрузите компьютер и введите команду:
 
 ```bash
 wsl --set-default-version 2
 ```
 
 После этого [установите Ubuntu 22.04.1 из Microsoft Store](https://www.microsoft.com/p/ubuntu/9PN20MSR04DW) и запустите.
-Важно: **не** используйте команду `wsl --install`, она [пока не умеет устанавливать Ubuntu 22.04](https://github.com/microsoft/WSL/issues/8402).
 
-После установки запустите WSL и настройте как будто это обычная Ubuntu.
+После установки запустите WSL и настройте как будто это обычная Ubuntu, разве что без виртуальной машины с Windows (у вас уже есть обычная).
 Обязательно проверьте версию.
 
 ## Прочие инструменты
