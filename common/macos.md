@@ -39,3 +39,8 @@
 По умолчанию будет использоваться компилятор Apple Clang и стандартная библиотека Apple libc++.
 Не libstdc++, как на Linux, и даже не совсем LLVM libc++.
 Из-за этого и говорят, что "на маках компилируется, а под другими ОС нет", виновата другая стандартная библиотека.
+
+## Возможные проблемы
+* [Ошибка при установке Homebrew: `"Failed during: git fetch origin master:refs/remotes/origin/master -n --depth=1"`](https://stackoverflow.com/questions/39836190/homebrew-install-failed-during-git-fetch-origin-masterrefs-remotes-origin-mas)
+    * Может помочь команда `git config --global user.email <здесь-ваш-email-с-GitHub>`, вроде `git config --global user.email noreply@example.com`.
+      На самом деле можно написать любой email (даже несуществующий), но тогда на GitHub могут быть трудности, если забудете поменять.
