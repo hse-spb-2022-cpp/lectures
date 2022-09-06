@@ -3,7 +3,7 @@
 int main() {
     /* variable declaration: type of a variable is always fixed
        type is a pair of (possible values, possible operations) */
-    int a, b;
+    int a /* comment here */, b;
     a = 5;  // ok
     std::cin >> a >> b;
     std::cout << a + b << std::endl;  // like "\n", but flushes buffer, much slower
