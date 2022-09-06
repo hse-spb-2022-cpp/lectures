@@ -3,7 +3,8 @@
 int main() {
     std::cout << "C++ " << __cplusplus << "\n";
 
-#if defined(__x86_64__) || defined(_WIN64)
+    // Intel x86-64 or Apple Silicon
+#if defined(__x86_64__) || defined(_WIN64) || defined(__arm64__)
     std::cout << "64-bit\n";
 #else
     std::cout << "32-bit\n";
