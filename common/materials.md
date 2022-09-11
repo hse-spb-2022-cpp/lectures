@@ -37,6 +37,9 @@
 * Переход с Python на C++ для алгоритмических задач и олимпиад: https://notes.algoprog.ru/cpp/index.html
 * Книга от создателя языка C++ (есть перевод на русский): [Programming – Principles and Practice Using C++ от Bjarne Stroustrup](https://www.stroustrup.com/programming.html).
   Сам не читал, содержание выглядит разумно, но наверняка изложение сильно отличается от нашего курса.
+* Работа с консолью:
+    * [Краткая вводная лекция](https://www.youtube.com/watch?v=G7Dgxtgj2Tw&list=PLxMpIvWUjaJuOVEWZ0-H7QaUeREmyqNl9&index=2)
+    * [Курс по работе в Linux](https://stepik.org/course/73/promo) (обязательно знать от раздела 1.4 "Terminal: основы" до раздела 1.6 "Ввод / вывод" включительно)
 
 ## Справочники
 * https://en.cppreference.com/w/cpp – основной источник.
