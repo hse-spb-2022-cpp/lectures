@@ -51,6 +51,7 @@
 ## Заметки
 * Про зарезервированные имена в Си и C++ (нижние подчёркивания и не только): https://stackoverflow.com/questions/228783/what-are-the-rules-about-using-an-underscore-in-a-c-identifier/228797#228797
 * Про отличия undefined, unspecified и implementation-defined behavior: https://stackoverflow.com/questions/2397984/undefined-unspecified-and-implementation-defined-behavior
+* [UBBook](https://github.com/Nekrolm/ubbook) – сборник интересного неопределённого поведения (неисчерпывающий)
 
 # Запрещённые материалы
 * coderoad.ru – это машинные переводы со stackoverflow.com, лучше в оригинале или переводить компьютером самостоятельно.
