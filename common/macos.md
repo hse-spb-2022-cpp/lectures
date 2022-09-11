@@ -12,6 +12,7 @@
    ```
 2. В качестве виртуальной машины, если у вас процессор Intel, проще всего поставить [Oracle VirtualBox](https://www.virtualbox.org/) и скачать в него [готовый образ с Ubuntu 22.04 от проекта OSboxes](https://www.osboxes.org/ubuntu/). Дальше следуйте шагам по настройке Ubuntu.
    Для процессора M1 Ubuntu можно поставить через [виртуальную машину UTM](https://mac.getutm.app/gallery/ubuntu-20-04), только используйте [Ubuntu 22.04](https://mirror.yandex.ru/ubuntu-cdimage/releases/22.04.1/release/ubuntu-22.04.1-live-server-arm64.iso) вместо Ubuntu 20.04.
+   Экспериментальная альтернатива – установить всё [через Docker](https://github.com/hse-spb-2022-cpp/hse-cpp-docker).
 3. Установите пакетный менеджер [Homebrew](https://brew.sh/): запустите команду с домашней страницы и внимательно прочитайте, когда оно скажет Run these two commands in your terminal, эти команды необходимо выполнить. 
 4. Выполните команды:
    ```bash

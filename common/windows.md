@@ -60,6 +60,9 @@
 Дальше идёт пересказ [инструкции по ручной установке WSL](https://docs.microsoft.com/ru-ru/windows/wsl/install-manual).
 Автоматическая через команду `wsl --install` **не подходит**, она [пока не умеет устанавливать Ubuntu 22.04](https://github.com/microsoft/WSL/issues/8402).
 
+Экспериментальная альтернатива – установить всё [через Docker](https://github.com/hse-spb-2022-cpp/hse-cpp-docker), но он
+тоже может затребовать включённый WSL.
+
 Выполните следующие команды в консоли от имени администратора:
 
 ```bash
