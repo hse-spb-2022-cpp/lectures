@@ -10,13 +10,16 @@ int main() {
     }
     // Operator precedence: && is like *, || is like +:
     // https://en.cppreference.com/w/cpp/language/operator_precedence
+    // a && b || c
 
     // Just to demonstrate negation, if-else would be better
+    // if (!n % 3 == 0 || n % 5 == 0) {   // oops: !n
     if (!(n % 3 == 0 || n % 5 == 0)) {
         std::cout << "Neither Fizz nor Buzz\n";
     }
 
-    // Alternative operators are banned for us.
+    // Alternative operators are banned for us:
+    // https://en.cppreference.com/w/cpp/language/operator_alternative
     if (not(n % 3 == 0 or n % 5 == 0)) {
         std::cout << "Neither Fizz nor Buzz\n";
     }

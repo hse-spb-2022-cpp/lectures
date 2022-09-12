@@ -13,6 +13,6 @@ int main() {
     b = 55;  // not UB, changed to 1
              // Extra reading:
              // https://stackoverflow.com/questions/54120862/does-the-c-standard-allow-for-an-uninitialized-bool-to-crash-a-program
-    std::cout << b << "\n";
-    std::cout << b + 10 << "\n";  // 1 + 10
+    std::cout << b << "\n";       // 1
+    std::cout << b + 10 << "\n";  // bool + int, int, 1 + 10
 }

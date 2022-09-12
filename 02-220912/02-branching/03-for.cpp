@@ -18,12 +18,19 @@ int main() {
     // std::cout << i << "\n";  // compilation error: `i` is dead
     std::cout << "loop done\n";
 
+    for (int i = 0; i < n; ++i) {  // ++i may be faster than i++, but optimizer
+                                   // for int is good enough.
+        std::cout << "i=" << i << "\n";
+    }
+    std::cout << "loop 2 done\n";
+
     // more complicated
     int j = 5;
-    for (; j < 10; j += 2) {  // you can omit any part; it's true
+    for (; j < 10; j += 2)  // you can omit any part
         std::cout << "j=" << j << "\n";
-    }
+    std::cout << "loop done: " << j << "\n";
 
     // infinite loop
-    // for (;;) {}
+    for (;;) {  // omitted condition is always true
+    }
 }

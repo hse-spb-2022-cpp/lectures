@@ -4,6 +4,7 @@ int main() {
     {
         std::cout << "===== long long =====\n";
         long long a = 9'000'000'000'000'000'000;
+        std::cout << sizeof(a) << " " << sizeof(long long) << "\n";
         std::cout << a << "\n";
     }
     {

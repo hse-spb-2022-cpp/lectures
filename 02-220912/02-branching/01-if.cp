@@ -7,11 +7,22 @@ int main() {
     // Shorter
     if (n < 10)
         std::cout << "less than 10\n";
+
+    // Not so short
+    if (n < 10)
+        std::cout << "less than 10\n";
     else
         std::cout << "greater or equal than 10\n";
 
+    // Ambiguity
+    if (n < 10)
+        if (n < 20)
+            std::cout << "a\n";
+        else  // always for the most nested if
+            std::cout << "b\n";
+
     // Harder to screw up
-    if (n == 10) {  // careful: ==, not =
+    if (n == 10) {
         std::cout << "n is \n";
         std::cout << "equal to ten\n";
     } else {

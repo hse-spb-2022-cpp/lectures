@@ -5,6 +5,8 @@ int main() {
     x = y = 20;
     std::cout << x << " " << y << "\n";
 
+    std::cout << (x = 15) << "\n";  // 15, but what for?
+
     if (x = 5) {  // modern compiler should emit warning
         std::cout << "x = " << x << "\n";
     }

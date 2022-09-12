@@ -7,13 +7,13 @@ int main() {
             a * a;  // UB: int * int is calculated inside int (signed overflow,
                     // UB), and is then converted to long long
         // Check with -fsanitize=undefined
-        // See "Usual arithmetic conversions" in
-        // https://en.cppreference.com/w/c/language/conversion
         std::cout << b << "\n";
     }
     {
         // Explicit conversion to `long long`.
         long long b = static_cast<long long>(a) * a;  // long long * int
+        // See "Usual arithmetic conversions" in
+        // https://en.cppreference.com/w/c/language/conversion
         std::cout << b << "\n";
     }
     {

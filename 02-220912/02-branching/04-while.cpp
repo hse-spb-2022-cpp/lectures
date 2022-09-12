@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    int n = 5;
+    unsigned n = 5;    // works with both `int` and `unsigned int`
     while (n-- > 0) {  // while (n --> 0)
         std::cout << n << "\n";
     }

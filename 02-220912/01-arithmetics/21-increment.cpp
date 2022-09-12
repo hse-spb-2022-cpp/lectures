@@ -12,6 +12,10 @@ int main() {
         x++;
         ++x;
         std::cout << x << "\n";  // 24
+
+        x--;  // x -= 1;
+        x++;
+        std::cout << x << "\n";  // 24
     }
     {
         int x = 10;
@@ -23,7 +27,7 @@ int main() {
         int z2 = ++x;                          // ++x; z2 = x (32);
         std::cout << z1 << " " << z2 << "\n";  // 30 32
 
-        // int z3 = x++ + --x; // UB: variable is modified twice
+        int z3 = x++ + --x;  // UB: variable is modified twice
         // std::cout << z3 << "\n";
 
         x += z1 += 10;

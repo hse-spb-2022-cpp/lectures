@@ -30,4 +30,20 @@ int main() {
         std::cout << v[i - 1] << "\n";
     }
 #endif
+
+#if 1
+    std::cout << "===== loop 4 =====\n";
+    // Good, but weird
+    for (auto i = v.size(); i-- > 0;) {
+        std::cout << v[i] << "\n";
+    }
+#endif
+
+#if 1
+    std::cout << "===== loop 5 =====\n";
+    // Good, but weird
+    for (int i = static_cast<int>(v.size()) - 1; i >= 0; i--) {
+        std::cout << v[i] << "\n";
+    }
+#endif
 }

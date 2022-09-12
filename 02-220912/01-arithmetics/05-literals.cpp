@@ -13,6 +13,8 @@ int main() {
     a = 0x2F;                                          // hexadecimal
     std::cout << a << " " << 2 * 16 + 1 * 15 << "\n";  // 47
 
+    a = 0xDEADBEEF;
+
     a = 0123;                                                 // octal
     std::cout << a << " " << 64 * 1 + 8 * 2 + 1 * 3 << "\n";  // 83
 
