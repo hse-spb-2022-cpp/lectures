@@ -16,4 +16,13 @@ int main() {
     if (a < 0) {  // always false
         std::cout << "Always non-negative number is negative??\n";
     }
+
+    // Not ok: `unsigned > signed` is `unsigned > unsigned`, `-1` is
+    // taken modulo 2**32. See "Usual arithmetic conversions" in
+    // https://en.cppreference.com/w/c/language/conversion
+    if (a > -1) {
+        std::cout << "OK\n";
+    } else {
+        std::cout << "Always non-negative number is not greater than -1??\n";
+    }
 }

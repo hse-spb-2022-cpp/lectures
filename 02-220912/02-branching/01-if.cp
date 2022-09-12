@@ -19,10 +19,6 @@ int main() {
         std::cout << "ten\n";
     }
 
-    if (n = 10) {  // modern compiler should emit warning
-        std::cout << "always true?\n";
-    }
-
     // If-else emulation
     if (n < 10) {
         std::cout << "n < 10\n";

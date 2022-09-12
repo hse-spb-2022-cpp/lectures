@@ -14,4 +14,10 @@ int main() {
 
     // 2 -1 since N2757
     std::cout << -7 / -3 << " " << -7 % -3 << "\n";
+
+    int x = 0;
+    std::cout << 1 / x << "\n";  // UB
+    std::cout << "OK 1\n";
+    std::cout << 1 % x << "\n";  // UB
+    std::cout << "OK 2\n";
 }
