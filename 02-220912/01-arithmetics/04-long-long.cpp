@@ -22,4 +22,6 @@ int main() {
                                           // unsigned decimal literals
         std::cout << a << "\n";
     }
+    // All types and constraints:
+    // https://en.cppreference.com/w/cpp/language/types
 }

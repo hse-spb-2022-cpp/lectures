@@ -14,4 +14,5 @@ int main() {
              // Extra reading:
              // https://stackoverflow.com/questions/54120862/does-the-c-standard-allow-for-an-uninitialized-bool-to-crash-a-program
     std::cout << b << "\n";
+    std::cout << b + 10 << "\n";  // 1 + 10
 }

@@ -5,6 +5,8 @@
 int main() {
     int a;
 
+    std::cout << 1'2345 << "\n";  // C++14
+
     a = 123;                                                    // decimal
     std::cout << a << " " << 100 * 1 + 10 * 2 + 1 * 3 << "\n";  // 123
 

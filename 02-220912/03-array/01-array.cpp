@@ -3,8 +3,8 @@
 #include <vector>
 
 int main() {
-    std::vector<int> v1, v2;  // empty dynamic arrays
-    std::vector<int> v3(10);  // 10 zeros
+    std::vector<int> v1, v2;       // empty dynamic arrays
+    std::vector<int> v3(10);       // 10 zeros
     std::vector<int> v4{1, 2, 3};  // 3 elements: 1, 2, 3
 
     std::cout << "v1:";

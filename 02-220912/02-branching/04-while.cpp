@@ -9,7 +9,13 @@ int main() {
 
     while (true) {
         int v;  // Please do declare variables inside the loop, it's free!
-        std::cin >> v;
+        if (!(std::cin >> v)) {
+            break;
+        }
         std::cout << "v=" << v << "\n";
     }
+
+    do {
+        std::cout << "infinite loop\n";
+    } while (true);
 }
