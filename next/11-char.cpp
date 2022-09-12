@@ -8,6 +8,7 @@ int main() {
                    // note single quotes.
     std::cout << c << " " << c - 1 << " " << static_cast<int>(c) << "\n";
     std::cout << static_cast<char>(48) << "\n";
+    std::cout << '5' - '2' << "\n";  // promoted to `int`. `int - int`
 
     // Check: type `hello`, type `  h  e `
     std::cin >> c;  // Skips whitespaces, reads a single char
@@ -15,3 +16,5 @@ int main() {
     std::cin >> c;  // Skips whitespaces, reads a single char
     std::cout << "char=" << c << " " << static_cast<int>(c) << "\n";
 }
+
+// TODO: signed, unsigned, non-latin, isspace...
