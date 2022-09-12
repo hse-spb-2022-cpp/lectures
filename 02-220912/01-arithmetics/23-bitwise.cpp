@@ -15,10 +15,13 @@ int main() {
 
     std::cout << "===== shifts UB =====\n";
     a = -10;
-    std::cout << (a >> 2) << "\n";  // Implementation-defined in C++17 and
-                                    // prior, division in C++20
-    std::cout << (a << 3)
-              << "\n";  // UB in C++17 and prior, multiplication in C++20
+
+    // Implementation-defined in C++17 and prior, division in C++20
+    // https://gcc.gnu.org/onlinedocs/gcc/Integers-implementation.html#Integers-implementation
+    std::cout << (a >> 2) << "\n";
+
+    // UB in C++17 and prior, multiplication in C++20
+    std::cout << (a << 3) << "\n";
 
     std::cout << (a << 30) << "\n";  // UB: overflow
     std::cout << (a << 31) << "\n";  // UB: overflow

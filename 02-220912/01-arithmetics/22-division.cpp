@@ -5,6 +5,7 @@ int main() {
     // Invariant: (a / b) * b + (a % b) == a
 
     // -2 -1 or -3 2, was implementation-defined behavior (sic!):
+    // https://gcc.gnu.org/onlinedocs/gcc/Integers-implementation.html#Integers-implementation
     // https://stackoverflow.com/questions/2397984/undefined-unspecified-and-implementation-defined-behavior
     // Since N2757 https://cplusplus.github.io/CWG/issues/614.html it is always
     // -2 -1
