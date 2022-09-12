@@ -1,4 +1,5 @@
 #include <iostream>
+
 int main() {
     {
         int x = 0;
@@ -18,15 +19,15 @@ int main() {
         std::cout << y << "\n";
         // x = 30, y = 30
 
-        int z1 = x++;  // z1 = x (30); x++; 
-        int z2 = ++x;  // ++x; z2 = x (32);
+        int z1 = x++;                          // z1 = x (30); x++;
+        int z2 = ++x;                          // ++x; z2 = x (32);
         std::cout << z1 << " " << z2 << "\n";  // 30 32
 
-//        int z3 = x++ + --x; // UB: variable is modified twice
-//        std::cout << z3 << "\n";
+        // int z3 = x++ + --x; // UB: variable is modified twice
+        // std::cout << z3 << "\n";
 
         x += z1 += 10;
         std::cout << z1 << "\n";  // 40
-        std::cout << x << "\n";  // 72
+        std::cout << x << "\n";   // 72
     }
 }
