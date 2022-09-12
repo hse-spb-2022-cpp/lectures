@@ -20,7 +20,10 @@ int main() {
 
     // more complicated
     int j = 5;
-    for (; j < 10; j += 2) {
+    for (; j < 10; j += 2) {  // you can omit any part; it's true
         std::cout << "j=" << j << "\n";
     }
+
+    // infinite loop
+    // for (;;) {}
 }

@@ -10,7 +10,9 @@ int main() {
         std::cout << "===== conversions ===== \n";
         int x = 10;
         long long y = x;  // ok, implicit conversion
-        int z = y;  // ok, implicit conversion, possible loss of information
+        y = y * 1'000'000'000;
+        int z = y;  // ok, implicit conversion, possible loss of information,
+                    // unspecified (not undefined!) behavior
         std::cout << x << " " << y << " " << z << "\n";
     }
     {

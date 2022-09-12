@@ -3,7 +3,7 @@
 
 int main() {
     std::cout << "short: " << sizeof(short) << "\n";  // Typically 2 bytes
-    std::cout << "long: " << sizeof(long) << "\n";    // Typically 4 or 8 bytes
+    std::cout << "long: " << sizeof(long) << "\n";    // Typically 4 or 8 bytes (see msys2 vs Linux)
     std::cout << "std::size_t: " << sizeof(std::size_t)
               << "\n";  // Typically 4 or 8 bytes
 
