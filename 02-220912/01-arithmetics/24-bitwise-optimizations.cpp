@@ -1,6 +1,7 @@
 #include <iostream>
 
 int main() {
+    // Bit shifts and operations are very fast: https://www.nandgame.com/
     // https://godbolt.org/z/Y5hez7WMG
     int a;
     std::cin >> a;
