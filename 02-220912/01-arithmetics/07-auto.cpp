@@ -17,5 +17,8 @@ int main() {
     std::cout << z2 << " " << sizeof(z2) << "\n";
 
     // `auto` works with other types as well, but it is always deduced from the
-    // initialization
+    // initialization.
+
+    // Does not work:
+    auto tmp; tmp = 12;
 }

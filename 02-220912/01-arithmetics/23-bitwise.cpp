@@ -13,6 +13,13 @@ int main() {
     std::cout << (a << 3) << "\n";  // *2**3, *8
     std::cout << (a >> 2) << "\n";  // /2**2, /4
 
+    std::cout << "===== shifts overflow =====\n";
+    std::cout << (a << 30) << "\n";  // UB: overflow
+    std::cout << (a << 31) << "\n";  // UB: overflow
+
+    unsigned a_u = 10;
+    std::cout << (a_u << 30) << "\n";  // OK: unsigned overflow
+
     std::cout << "===== shifts UB =====\n";
     a = -10;
 
@@ -22,12 +29,6 @@ int main() {
 
     // UB in C++17 and prior, multiplication in C++20
     std::cout << (a << 3) << "\n";
-
-    std::cout << (a << 30) << "\n";  // UB: overflow
-    std::cout << (a << 31) << "\n";  // UB: overflow
-
-    unsigned a_u = 10;
-    std::cout << (a_u << 30) << "\n";  // OK: unsigned overflow
 
     int b = 32;
     std::cout << (0 << b) << "\n";  // UB: shifting by 8*sizeof() bits

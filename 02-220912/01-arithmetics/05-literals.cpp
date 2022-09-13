@@ -10,7 +10,8 @@ int main() {
     a = 123;                                                    // decimal
     std::cout << a << " " << 100 * 1 + 10 * 2 + 1 * 3 << "\n";  // 123
 
-    a = 0x2F;                                          // hexadecimal
+    a = 0x2F;  // hexadecimal: 0x or 0X
+    a = 0x2f;
     std::cout << a << " " << 2 * 16 + 1 * 15 << "\n";  // 47
 
     a = 0xDEADBEEF;
