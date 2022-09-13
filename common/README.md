@@ -1,2 +1,2 @@
-* [Софт](README.md)
+* [Софт](software.md)
 * [Материалы](materials.md)
