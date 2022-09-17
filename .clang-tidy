@@ -1,0 +1,6 @@
+Checks: "-*,boost-*,bugprone-*,concurrency-*,cppcoreguidelines-*,misc-*,modernize-*,performance-*,portability-*,readability-*,google-build-namespaces,google-build-using-namespace,google-global-names-in-headers,google-readability-casting,google-runtime-operator,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-cppcoreguidelines-pro-bounds-constant-array-index,-*magic-numbers*,-*avoid-c-arrays*,-modernize-use-trailing-return-type,-readability-else-after-return,-readability-named-parameter,-readability-identifier-length,-bugprone-easily-swappable-parameters"
+WarningsAsErrors: "*"
+ExtraArgs:
+    - "-std=c++17"
+ExtraArgsBefore:
+    - "-xc++"
