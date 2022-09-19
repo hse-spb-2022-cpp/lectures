@@ -17,6 +17,7 @@ int main() {
     for (auto &x : v) {  // & is 'reference' when attached to a type
         x += 10;
     }
+
     std::cout << "v:";
     // for (const int &x : v)  // also ok
     for (const auto &x : v) {  // 'const-reference', cannot be modified

@@ -43,5 +43,5 @@ int main() {
     std::cout << "\n";
 
     v.clear();
-    std::cout << v.size() << "\n";
+    std::cout << v.size() << "\n";  // 0
 }

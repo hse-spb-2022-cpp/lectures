@@ -11,9 +11,13 @@ int main() {
     std::cout << static_cast<char>(48) << "\n";
     std::cout << '5' - '2' << "\n";  // promoted to `int`. `int - int`
 
+    std::cout << '\'' << '\n';  // escaping of special characters: still a single int
+    std::cout << "\"quotes\"\n";  // escaping works inside strings as well
+
     // Check: type `hello`, type `  h  e `
     std::cin >> c;  // Skips whitespaces, reads a single char
     std::cout << "char=" << c << " " << static_cast<int>(c) << "\n";
     std::cin >> c;  // Skips whitespaces, reads a single char
     std::cout << "char=" << c << " " << static_cast<int>(c) << "\n";
+    // Alternative: std::cin.get(), will be later
 }
