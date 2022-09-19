@@ -6,7 +6,8 @@ int main() {
                         // I/O purposes. Still does arithmetics.
     char c = '0';  // Typically 48 (ASCII table; please do not use non-ASCII),
                    // note single quotes.
-    std::cout << c << " " << c - 1 << " " << static_cast<int>(c) << "\n";
+                   // https://en.cppreference.com/w/cpp/language/character_literal
+    std::cout << c << " " << c - 1 /* char - int = int */ << " " << static_cast<char>(c - 1) << "\n";
     std::cout << static_cast<char>(48) << "\n";
     std::cout << '5' - '2' << "\n";  // promoted to `int`. `int - int`
 
@@ -16,5 +17,3 @@ int main() {
     std::cin >> c;  // Skips whitespaces, reads a single char
     std::cout << "char=" << c << " " << static_cast<int>(c) << "\n";
 }
-
-// TODO: signed, unsigned, non-latin, isspace...
