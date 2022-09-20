@@ -10,15 +10,16 @@ int main() {
     std::cout << a << '\n';
 
     // compilation error: legacy, string literal is not really a string
-    // https://en.cppreference.com/w/cpp/language/string_literal
-    std::string a_bad = "hello" + "world";
-
     // `auto` here is not `std::string`, legacy
     [[maybe_unused]] auto a_no_auto = "hello";
     a_no_auto += "world";
 
+    // https://en.cppreference.com/w/cpp/language/string_literal
+    std::string a_bad = "hello" + "world";
+
     // ok, but why? Literals only
     [[maybe_unused]] std::string a_wtf = "hello" "world";
+    [[maybe_unused]] std::string a_wtf_ce = "hello" a;  // compilation error
 
     // Very like vector:
     a.push_back('Z');
