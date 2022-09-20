@@ -11,6 +11,7 @@ int main() {
     // Operator precedence: && is like *, || is like +:
     // https://en.cppreference.com/w/cpp/language/operator_precedence
     // a && b || c
+    // a || b && c
 
     // Just to demonstrate negation, if-else would be better
     // if (!n % 3 == 0 || n % 5 == 0) {   // oops: !n

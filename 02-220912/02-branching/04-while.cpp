@@ -9,6 +9,7 @@ int main() {
 
     while (true) {
         int v;  // Please do declare variables inside the loop, it's free!
+        // https://blog.algoprog.ru/init-not-clear/
         if (!(std::cin >> v)) {
             break;
         }

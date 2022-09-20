@@ -4,7 +4,7 @@
 int main() {
     std::vector v{1, 2, 3};
 #if 1
-    // FIXME: infinite loop
+    // FIXME: infinite loop and UB
     std::cout << "===== loop 1 =====\n";
     for (auto i = v.size() - 1; i >= 0; i--) {
         std::cout << v[i] << "\n";
