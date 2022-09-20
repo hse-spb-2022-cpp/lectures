@@ -13,7 +13,7 @@ int main() {
 
 #if 1
     std::cout << "===== loop 2 =====\n";
-    // FIXME: sometimes infinite loop and UB
+    // FIXME: sometimes UB
     // Hint: empty
     for (auto i = v.size() - 1;; i--) {
         std::cout << v[i] << "\n";
@@ -41,6 +41,7 @@ int main() {
 
 #if 1
     std::cout << "===== loop 5 =====\n";
+    // for (int i = v.size() - 1; i >= 0; i--) {  // UB if v.empty()
     // Good, but weird
     for (int i = static_cast<int>(v.size()) - 1; i >= 0; i--) {
         std::cout << v[i] << "\n";

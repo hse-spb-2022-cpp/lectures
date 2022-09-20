@@ -24,20 +24,20 @@ int main() {
 
     std::cout << "v3:";
     for (int value : v3) {  // range-based-for
-        // value is a copy, not element of v3
         std::cout << " " << value;
+        // please do not change size of v3, it will be UB
     }
     std::cout << "\n";
 
     std::cout << "v4:";
     for (auto value : v4) {
-        // value is a copy, not element of v3
         std::cout << " " << value;
     }
     std::cout << "\n";
 
     std::cout << "v5 + 10:";
     for (auto value : v5) {
+        // value is a copy, not element of v5
         value += 10;
         std::cout << " " << value;
     }
