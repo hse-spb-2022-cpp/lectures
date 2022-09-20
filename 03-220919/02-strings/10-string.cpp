@@ -16,12 +16,13 @@ int main() {
 
     // https://en.cppreference.com/w/cpp/language/string_literal
     std::string a_bad = "hello" + "world";
+    std::string a_good = std::string("hello") + "world";
 
     // ok, but why? Literals only
     [[maybe_unused]] std::string a_wtf = "hello" "world";
     [[maybe_unused]] std::string a_wtf_ce = "hello" a;  // compilation error
 
-    // Very like vector:
+    // Very like vector<char>
     a.push_back('Z');
     a.pop_back();
     std::cout << a.size() << " " << a.length() << "\n";

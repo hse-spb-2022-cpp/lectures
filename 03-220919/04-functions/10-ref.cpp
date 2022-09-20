@@ -2,11 +2,11 @@
 #include <iostream>
 #include <string>
 
-void append(std::string &s) {
+void append(std::string &s) {  // pass-by-reference
     s += 'x';
 }
 
-void print_appended(const std::string &s) {
+void print_appended(const std::string &s) {  // pass-by-const-reference
     std::cout << s << 'x';
 }
 

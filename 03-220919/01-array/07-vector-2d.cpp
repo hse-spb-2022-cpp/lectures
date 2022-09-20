@@ -12,7 +12,7 @@ int main() {
             if (j > 0) {
                 std::cout << ' ';
             }
-            std::cout << v[i][j];  // not [i, j]
+            std::cout << v[i][j];  // not v[i, j]
         }
         std::cout << '\n';
     }

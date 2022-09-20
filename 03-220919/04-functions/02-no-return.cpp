@@ -1,7 +1,7 @@
 #include <iostream>
 
-int sum(int a, int b) {  // each parameter is a copy of an arguments
-    a += b;  // does not modifies arguments
+int sum(int a, int b) {
+    a += b;
     if (a == 25) {
         return 10;
     }
