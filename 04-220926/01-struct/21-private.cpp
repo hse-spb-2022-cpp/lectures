@@ -3,7 +3,7 @@
 
 struct ratio {
 private:
-    // denom != 0
+    // Invariant: denom != 0
     int num;
     int denom;
 
@@ -13,7 +13,7 @@ public:
     ratio(int num_, int denom_) : num(num_), denom(denom_) {
         assert(denom != 0);
     }
-    explicit operator double() const {
+    double to_double() const {
         return num * 1.0 / denom;
     }
 

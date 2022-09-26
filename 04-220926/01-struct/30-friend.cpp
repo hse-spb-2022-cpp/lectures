@@ -8,7 +8,6 @@ public:
     void increment() {
         field++;
     }
-
     
 private:  // private, public, does not matter, visible to all
     friend bool eq(const Foo &a, const Foo &b) {

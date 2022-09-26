@@ -13,6 +13,7 @@ struct ratio {
 int main() {
     ratio r{3, 4};
     std::cout << r.num << "\n";
+    // double x0 = r;  // compilation error
     double x = static_cast<double>(r);
     std::cout << x << "\n";
     std::cout << static_cast<double>(r) << "\n";

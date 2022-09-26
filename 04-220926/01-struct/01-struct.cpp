@@ -27,7 +27,11 @@ int main() {
     std::cout << p.x << " " << p.y << "\n";
     std::cout << p.dist2() << "\n";
 
-    p += {5, 5};
-    // p.operator+=(Point{5, 5});
+    Point p2;
+    p2.x = 5;
+    p2.y = 6;
+
+    p += p2;
+    // p.operator+=(p2);
     std::cout << p.x << " " << p.y << "\n";
 }

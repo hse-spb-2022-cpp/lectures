@@ -7,6 +7,7 @@ struct ratio {
     // Better to initialize correctly right away than to reassign.
     ratio() {}
     ratio(int value) : num(value) {}
+    ratio(int value, int value_denom) : num(value), denom(value_denom) {}
 };
 
 int main() {
@@ -17,4 +18,8 @@ int main() {
     ratio r2(10);
     std::cout << r2.num << "\n";
     std::cout << r2.denom << "\n";
+
+    ratio r3(10, 11);
+    std::cout << r3.num << "\n";
+    std::cout << r3.denom << "\n";
 }

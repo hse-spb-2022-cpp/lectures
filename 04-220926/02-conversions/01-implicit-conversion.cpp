@@ -20,9 +20,15 @@ ratio generate_ratio() {
 }
 
 int main() {
-    ratio r = 10;  // 1(a). copy initialization, it has '='
+    ratio r(10);  // direct initialization
+    ratio r1 = 10;  // 1(a). copy initialization, it has '='
     ratio r2 = {10};  // 1(b). list copy initialization, it has '='.
     println(r);  // no new objects
-    println(10);  // 2. copy initialization: a temporary is created
+    println(10);  // 2(a). copy initialization: a temporary is created
+    println({10});  // 2(b). list copy initialization
     println(generate_ratio());
+
+    int x = 20;
+    ratio r3 = x;  // copy initialization
+    println(r3);
 }

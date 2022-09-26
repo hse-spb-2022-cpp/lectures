@@ -1,7 +1,8 @@
 #include <cassert>
 #include <iostream>
+#include <tuple>
 
-/* [[nodiscard]] */ int sum(int a, int b) {
+[[nodiscard]] int sum(int a, int b) {
     return a + b;
 }
 
@@ -17,5 +18,6 @@ int main() {
     sum(5, 6);  // totally useless, we want a warning from the compiler
 
     readInt();  // skip the number. Kind of useless, [[nodiscard]] is a matter of taste
+    std::ignore = readInt();  // explicit ignore
     sum(readInt(), readInt());  // totally useless, just readInt(), readInt()
 }

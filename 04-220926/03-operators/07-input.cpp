@@ -21,11 +21,10 @@ public:
 };
 
 int main() {
-    bigint a = 4;
-    std::cout << a << "\n";
-    (std::cout << a) << "\n";
+    bigint a, b;
+    std::cin >> a >> b;
+    (std::cin >> a) >> b;
 
-    std::stringstream s;
-    s << a << "\n";
-    std::cout << s.str();
+    std::stringstream s("1 2");
+    s >> a >> b;
 }

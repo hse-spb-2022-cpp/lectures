@@ -12,11 +12,15 @@ public:
         assert(0 <= digit && digit < 10);
     }
 
-    bigint &operator++() {  // returns the new value, this object
+    void operator++() {  // returns the new value, this object
+        digits[0]++;
         return *this;
     }
 
     bigint operator++(int) {  // returns old value, should be a copy
+        bigint old = *this;
+        digits[0]++;
+        return old;
     }
 };
 

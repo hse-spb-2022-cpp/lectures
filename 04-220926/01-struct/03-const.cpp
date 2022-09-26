@@ -4,6 +4,7 @@ struct Point {
     int x, y;
 
     int dist2() /* const */ {
+        // x++;
         return x * x + y * y;
     }
 
@@ -20,6 +21,9 @@ void print(const Point &p) {
     // WTF, use static_cast, it won't compile. Don't use const_cast, it compiles.
     Point &p2 = (Point&)(p);
     std::cout << p2.dist2() << "\n";
+
+    p2 += Point{5, 5};
+    std::cout << "after modification: " << p.x << " " << p.y << "\n";
 }
 
 int main() {
