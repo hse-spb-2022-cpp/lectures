@@ -6,7 +6,7 @@ int main() {
     // std::string s2 = static_cast<std::string>(10);  // compilation error
     std::cout << s.size() << ' ' << s << "\n";
 
-    int x = std::stoi("123");  // string-to-int
+    int x = std::stoi("123");  // string-to-int, stoll
     std::cout << x << "\n";
 
     std::string s3 = static_cast<std::string>(0);  // UB, because C++ and legacy

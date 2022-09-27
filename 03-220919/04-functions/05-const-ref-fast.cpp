@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-int sz(const std::string &s) {  // very popular in C++
+int sz(const std::string &s) {  // very popular in C++, pass-by-const-reference
     // s[0] = 'x';
     return static_cast<int>(s.size());
 }

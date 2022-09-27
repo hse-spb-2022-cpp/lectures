@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-int sz(std::string s) {
+int sz(std::string s) {  // pass-by-value
     return static_cast<int>(s.size());
 }
 
