@@ -21,6 +21,7 @@ public:
 int main() {
     bigint a = 4, b = 5;
     std::cout << (a == b) << "\n";
+    std::cout << operator==(a, b) << "\n";
     std::cout << (a == 6) << "\n";  // 6 is implicitly converted
     std::cout << (a == 4) << "\n";  // 4 is implicitly converted
     std::cout << (4 == b) << "\n";  // 4 is implicitly converted

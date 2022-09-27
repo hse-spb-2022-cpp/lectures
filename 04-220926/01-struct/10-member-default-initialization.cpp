@@ -10,4 +10,7 @@ int main() {
     std::cout << r.num << "\n";
     std::cout << r.denom << "\n";
     std::cout << ratio{}.num << "\n";
+
+    ratio r2{3, 4};
+    std::cout << r2.num << " " << r2.denom << "\n";
 }

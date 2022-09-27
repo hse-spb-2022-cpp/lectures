@@ -9,10 +9,9 @@ struct Point {
         return x * x + y * y;
     }
 
-    void operator+=(Point other) {  // operator overload
+    void operator+=(const Point &other) {  // operator overload
         x += other.x;
         y += other.y;
-        // z = 10;
     }
 };
 

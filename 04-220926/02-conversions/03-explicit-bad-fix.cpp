@@ -19,4 +19,6 @@ int main() {
     [[maybe_unused]] my_vector v2 = static_cast<my_vector>(10);
     // cast is explicit + copy initialization
     print_vector(static_cast<my_vector>(10));
+    // direct initialization of temporary
+    print_vector(my_vector(10));
 }

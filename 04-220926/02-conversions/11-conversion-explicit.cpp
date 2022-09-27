@@ -15,6 +15,8 @@ int main() {
     std::cout << r.num << "\n";
     // double x0 = r;  // compilation error
     double x = static_cast<double>(r);
+    double x2(r);
+    double x3 = double(r);
     std::cout << x << "\n";
     std::cout << static_cast<double>(r) << "\n";
 

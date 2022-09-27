@@ -12,7 +12,7 @@ public:
         assert(0 <= digit && digit < 10);
     }
 
-    void operator++() {  // returns the new value, this object
+    bigint &operator++() {  // returns the new value, this object
         digits[0]++;
         return *this;
     }

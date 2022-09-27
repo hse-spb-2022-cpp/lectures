@@ -7,7 +7,11 @@ private:
     int num;
     int denom;
 
+    // methods can be here as well
+
 public:
+    // fields can be here as well
+
     ratio() : num(0), denom(1) {}
     ratio(int value) : num(value), denom(1) {}
     ratio(int num_, int denom_) : num(num_), denom(denom_) {

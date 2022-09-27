@@ -14,8 +14,9 @@ int main() {
     ratio r{3, 4};
     std::cout << r.num << "\n";
     double x = r;  // implicit conversion
+    double x2 = static_cast<double>(r);  // explicit conversion
     std::cout << x << "\n";
-    std::cout << r << "\n";
+    std::cout << r << "\n";  // implicit conversion to double
 
     ratio r2 = r;
     std::cout << r2.num << "\n";

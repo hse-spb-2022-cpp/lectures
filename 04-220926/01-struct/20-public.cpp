@@ -10,7 +10,7 @@ struct ratio {
     ratio(int num_, int denom_) : num(num_), denom(denom_) {
         assert(denom != 0);
     }
-    double to_double() {
+    double to_double() const {
         return num * 1.0 / denom;
     }
 };

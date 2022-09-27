@@ -6,7 +6,7 @@
     return a + b;
 }
 
-int readInt() {
+/*[[nodiscard]]*/ int readInt() {
     int x;
     std::cin >> x;
     assert(std::cin);
@@ -18,6 +18,6 @@ int main() {
     sum(5, 6);  // totally useless, we want a warning from the compiler
 
     readInt();  // skip the number. Kind of useless, [[nodiscard]] is a matter of taste
-    std::ignore = readInt();  // explicit ignore
     sum(readInt(), readInt());  // totally useless, just readInt(), readInt()
+    std::ignore = readInt();  // explicit ignore, non-standard use of std::ignore
 }
