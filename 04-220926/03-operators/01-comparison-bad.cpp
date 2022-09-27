@@ -11,6 +11,7 @@ public:
     bigint(int digit) : digits{digit} {
         assert(0 <= digit && digit < 10);
     }
+    // Fun fact: this is wrong algorithmically. Guess how?
 
     bool operator==(const bigint &other) const {
         return digits == other.digits;

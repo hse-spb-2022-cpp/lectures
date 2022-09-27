@@ -38,7 +38,6 @@ int main() {
         std::cout << r2.num << "\n";
         std::cout << r2.denom << "\n";
 
-        // TODO
         // Who is completed first: first << or constructor?
         // C++17: behavior is defined;
         // Before C++17: behavior is implementation-defined(???)

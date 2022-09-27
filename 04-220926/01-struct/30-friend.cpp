@@ -17,6 +17,7 @@ private:  // private, public, does not matter, visible to all
 
 int main() {
     Foo f1, f2;
+    // f1.field = 5;
     f1.increment();
     std::cout << eq(f1, f2) << "\n";  // 0
     f2.increment();

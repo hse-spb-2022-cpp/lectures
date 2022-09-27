@@ -44,5 +44,6 @@ int main() {
     // r.denom = 0;
     // r.denominator(0);
     r = {r.numerator(), 5};
+    // r.denominator(5);
     std::cout << r.numerator() << "\n";
 }

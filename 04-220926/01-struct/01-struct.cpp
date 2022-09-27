@@ -13,7 +13,7 @@ struct Point {
         x += other.x;
         y += other.y;
     }
-};
+};  // important semicolon!
 
 void foo([[maybe_unused]] Point p) {
 }

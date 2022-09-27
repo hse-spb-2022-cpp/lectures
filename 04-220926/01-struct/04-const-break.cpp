@@ -16,7 +16,7 @@ struct Point {
 void foo(const Point &p) {
     // WTF, use static_cast, it won't compile. Don't use const_cast, it compiles.
     Point &p2 = (Point&)p;
-    // Point &p2 = static_cast<Point&>(p);
+    // Point &p3 = static_cast<Point&>(p);
     std::cout << p2.dist2() << "\n";
 
     p2 += Point{5, 5};

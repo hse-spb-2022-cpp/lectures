@@ -18,6 +18,7 @@ int main() {
     sum(5, 6);  // totally useless, we want a warning from the compiler
 
     readInt();  // skip the number. Kind of useless, [[nodiscard]] is a matter of taste
-    sum(readInt(), readInt());  // totally useless, just readInt(), readInt()
     std::ignore = readInt();  // explicit ignore, non-standard use of std::ignore
+
+    sum(readInt(), readInt());  // totally useless, just readInt(), readInt()
 }

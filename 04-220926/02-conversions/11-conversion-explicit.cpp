@@ -19,7 +19,4 @@ int main() {
     double x3 = double(r);
     std::cout << x << "\n";
     std::cout << static_cast<double>(r) << "\n";
-
-    ratio r2 = r;
-    std::cout << r2.num << "\n";
 }

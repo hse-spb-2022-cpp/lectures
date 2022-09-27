@@ -12,21 +12,21 @@ public:
         assert(0 <= digit && digit < 10);
     }
 
-    bigint operator+(const bigint &other) const {
-        return bigint(*this) += other;  // make a copy, alter it
-    }
-    
     bigint &operator+=(const bigint &other) {
         return *this = *this + other;
     }
-};
 
-bigint operator-(bigint lhs, const bigint &rhs) {
-    return lhs -= rhs;  // lhs is a copy already
-}
+    bigint operator+(const bigint &other) const {
+        return bigint(*this) += other;  // make a copy, alter it
+    }
+};
 
 bigint &operator-=(bigint &lhs, const bigint &rhs) {
     return lhs = lhs - rhs;
+}
+
+bigint operator-(bigint lhs, const bigint &rhs) {
+    return lhs -= rhs;  // lhs is a copy already
 }
 
 int main() {
