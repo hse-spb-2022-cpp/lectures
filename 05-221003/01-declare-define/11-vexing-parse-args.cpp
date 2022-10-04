@@ -8,6 +8,10 @@ struct Foo {
 struct Botva {
     Foo f(Bar());  // oops, function
     // TODO
+
+    void foo() {
+        f = f;
+    }
 };
 
 int main() {
@@ -15,8 +19,8 @@ int main() {
     // Foo f{Bar()};
     // Foo f(Bar{});
     // Foo f{Bar{}};
-    // Foo f((Bar()));
-    // Foo f(   (Bar())  );
+    // Foo f((Bar()));  // C++03 and before
+    // Foo f(   (Bar())  );  // C++03 and before
     f = f;
 }
 

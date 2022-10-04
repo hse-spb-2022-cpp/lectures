@@ -11,6 +11,11 @@ struct Foo {
 Foo get_foo();
 
 int main() {
+    {
+        Foo f;
+        f.method();
+    }
+
     // get_foo() creates vector in one place; but destruction thinks it's in the other place.
     get_foo().method();
 

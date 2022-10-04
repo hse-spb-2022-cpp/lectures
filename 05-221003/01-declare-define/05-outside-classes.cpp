@@ -17,6 +17,7 @@ struct Bar {
 
 void Foo::doit() {  // definition: `Foo::` is important
     bs.push_back(Bar());
+    bs.resize(10);
     Bar b2;
     bs[0].bar_do();
 }

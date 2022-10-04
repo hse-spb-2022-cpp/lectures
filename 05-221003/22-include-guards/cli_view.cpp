@@ -1,13 +1,6 @@
 #include <iostream>
 #include "field.hpp"
-
-/*namespace field {
-struct Field {
-    int width, height;
-
-    int area() const;
-};
-}  // namespace field*/
+#include "cli_view.hpp"
 
 namespace cli_view {
 void show_field(const field::Field &f) {

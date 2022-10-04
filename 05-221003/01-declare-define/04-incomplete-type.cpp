@@ -10,6 +10,7 @@ struct Foo {
 
     void doit() {
         bs.push_back(Bar());
+        bs.resize(10);
         Bar b2;
         b2.bar_do();
     }

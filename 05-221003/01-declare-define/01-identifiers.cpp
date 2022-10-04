@@ -6,6 +6,9 @@
 
 int _;  // UB
 int _z;  // UB
+int z_;  // ok
+int x__a = 30;  // UB
+int _Xx;  // UB
 
 struct foo_t {  // '_t', not UB, but reserved by POSIX.
 };

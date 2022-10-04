@@ -9,6 +9,7 @@ int main() {
     call_method(get_foo());
     Foo &f = get_foo();
     // f.method();  // Need complete type: is there even a `method`?
+    call_method(f);
 
     // Foo g = get_foo();  // Need complete type: have to allocate a place for `Foo`.
 }

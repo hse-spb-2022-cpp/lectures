@@ -1,3 +1,3 @@
-ПМИ: кроме 03-naive-include
-ПАДИИ-1:
+ПМИ: TODO
+ПАДИИ-1: кроме 02-namespaces
 ПАДИИ-2: кроме 02-namespaces, 12-struct-ub, 13-struct-incomplete
