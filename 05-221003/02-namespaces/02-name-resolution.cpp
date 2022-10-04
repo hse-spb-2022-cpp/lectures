@@ -27,4 +27,3 @@ int main() {
     ::foo();
     ns1::foo();
 }
-// TODO: (un)qualified lookup

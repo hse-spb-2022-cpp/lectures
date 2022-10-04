@@ -1,6 +1,6 @@
 #include <iostream>
 
-int write;
+int write;  // how to solve: namespaces
 
 int main() {
     std::ios_base::sync_with_stdio(false);

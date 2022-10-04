@@ -19,9 +19,9 @@ void foo() {
 }  // namespace ns2
 
 int main() {
-    foo();
-    ::foo();
-    ns1::foo();
+    foo();  // unqualified name lookup
+    ::foo();  // qualified name lookup
+    ns1::foo();  // unqualified name lookup + qualified
     ns2::foo();
     ns1::x = 10;
 }

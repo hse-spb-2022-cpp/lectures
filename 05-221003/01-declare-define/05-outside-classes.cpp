@@ -21,10 +21,11 @@ void Foo::doit() {  // definition: `Foo::` is important
     bs[0].bar_do();
 }
 
+// friend functions are usual global functions with special handling
+// two classes cannot have the same friend function
 void foo_friend() {  // definition: `Foo::` for friends is not needed
     Bar b3;
 }
 
 int main() {
-    // TODO: two friends of different classes?
 }

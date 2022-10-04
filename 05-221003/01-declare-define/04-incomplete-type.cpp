@@ -11,7 +11,7 @@ struct Foo {
     void doit() {
         bs.push_back(Bar());
         Bar b2;
-        bs[0].bar_do();
+        b2.bar_do();
     }
     friend void foo_friend() {
         Bar b3;

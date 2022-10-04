@@ -17,10 +17,14 @@ namespace ns2 {
 void bar() {
     std::cout << "ns1::ns2::bar\n";
 }
+void botva_ns2() {
+    std::cout << "ns1::ns2::botva_bs2()\n";
+}
 }  // namespace ns2
 
 namespace ns3 {
 void botva_ns3() {
+    // botva_ns2();  // only looks up in ns1::ns3, ns1::, ::, not ns1::ns2
     std::cout << "ns1::ns3::botva_ns3()\n";
 }
 }  // namespace ns3
@@ -44,4 +48,3 @@ int main() {
     ns1::ns2::bar();  // ok here, but not in ns1::ns3::ns4::baz()
     ::ns1::ns2::bar();  // ok
 }
-// todo: no going down/to the side
