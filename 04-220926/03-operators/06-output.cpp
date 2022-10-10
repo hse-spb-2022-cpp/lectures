@@ -26,6 +26,9 @@ int main() {
     bigint a = 4;
     std::cout << a << "\n";
     (std::cout << a) << "\n";
+    // (  std::cout.operator<<(a) ).operator<<("\n");
+    // operator<<(  operator<<(std::cout, a)  , "\n");
+    // operator<<(             std::cout      , "\n");
 
     std::stringstream s;
     s << a << "\n";
