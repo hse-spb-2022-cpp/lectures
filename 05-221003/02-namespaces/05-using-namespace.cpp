@@ -13,6 +13,8 @@ int main() {
     std::cout << x << " " << ::x << " " << ns::x << "\n";
     // foo();
     {
+        std::cout << x << " " << ::x << " " << ns::x << "\n";
+        // foo();
         using namespace ns;
         std::cout << /*x << " " <<*/ ::x << " " << ns::x << "\n";  // x is ambiguous
         foo();

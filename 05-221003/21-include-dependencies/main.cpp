@@ -1,3 +1,4 @@
+#include <vector>
 #include "foo.hpp"
 
 int main() {

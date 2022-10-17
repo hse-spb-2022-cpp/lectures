@@ -1,3 +1,5 @@
+#include <vector>
+
 struct Foo;
 
 // Incomplete type is enough for references/pointers passing.

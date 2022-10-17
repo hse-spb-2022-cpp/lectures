@@ -18,10 +18,12 @@ void foo() {
 }
 }  // namespace ns2
 
+namespace ns3 {}
+
 int main() {
     foo();  // unqualified name lookup
-    ::foo();  // qualified name lookup
     ns1::foo();  // unqualified name lookup + qualified
     ns2::foo();
     ns1::x = 10;
+    // ns3::foo();  // compilation error
 }
