@@ -1,11 +1,14 @@
 #include <algorithm>
 #include <iostream>
+#include <utility>
 
 int main() {
     std::pair<int, float> p = {10, 20.5};
 
     {
         auto [x, y] = p;
+        // auto x = p.first;
+        // auto y = p.second;
         std::cout << x << " " << y << "\n";
         x++;
         std::cout << x << " " << y << "\n";
@@ -14,6 +17,8 @@ int main() {
     std::cout << "=====\n";
     {
         auto &[x, y] = p;
+        // auto &x = p.first;
+        // auto &y = p.second;
         std::cout << x << " " << y << "\n";
         x++;
         std::cout << x << " " << y << "\n";

@@ -12,7 +12,7 @@ bool g(bool x) {
 }
 
 int main() {
-    // short circuit
+    // short circuit, lazy evaluation
     f(false) && g(false);
     std::cout << "====\n";
 
@@ -35,4 +35,5 @@ int main() {
 
     // similarly for ||
     // only for non-overloaded && and ||
+    // does not work for `... operator&&(.....)`
 }

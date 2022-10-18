@@ -8,4 +8,5 @@ int main() {
     double a = 1e100;
     double b = 1e100 + 1;
     std::cout << (a == b) << "\n";
+    std::cout << (a == a + 1) << "\n";
 }

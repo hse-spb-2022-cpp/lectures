@@ -2,8 +2,8 @@
 #include <iostream>
 
 int main() {
-    // floating-point numbers
-    double x = 1.2;
+    // floating-point numbers, IEEE-754
+    double x = 1.2;  // mantissa * 2^{exponent}
     x += 2.3;
     std::cout << x << "\n";
 

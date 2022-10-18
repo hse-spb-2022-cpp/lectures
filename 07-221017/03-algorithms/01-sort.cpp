@@ -1,5 +1,5 @@
-//#define _GLIBCXX_DEBUG  // For stdlibc++
-//#define _LIBCPP_DEBUG  // For libc++
+#define _GLIBCXX_DEBUG  // For stdlibc++
+#define _LIBCPP_DEBUG  // For libc++
 #include <algorithm>
 #include <cmath>
 #include <iostream>
@@ -15,7 +15,7 @@ int main() {
     std::cout << "\n";
 
     std::sort(v.begin(), v.end(), [](int a, int b) {
-        // operator<
+        // operator<, total order (полный линейный порядок)
         return std::abs(a - 7) < std::abs(b - 7);
 //        return false;  // Ok: all elements are equal
 //        return true;  // UB: irreflexivity is violated

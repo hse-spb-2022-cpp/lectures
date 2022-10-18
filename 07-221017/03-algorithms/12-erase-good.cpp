@@ -6,7 +6,7 @@ int main() {
         std::set<int> s{3, 1, 2, 4, 2};//, 100, 101, 102, 103, 104, 105, 106, 107};
         for (auto it = s.begin(); it != s.end(); ) {
             int x = *it;
-            it++;
+            ++it;
 
             // 1 2 3 4
             //     ^
@@ -27,7 +27,7 @@ int main() {
                 s.erase(it);
                 it = it_next;
             } else {
-                it++;
+                ++it;
             }
         }
         std::cout << s.size() << "\n";
@@ -43,6 +43,5 @@ int main() {
         }
         std::cout << s.size() << "\n";
     }
-    // std::remove_if for std::vector (not for std::set), it cannot alter the container
     // C++20: ranges
 }

@@ -10,12 +10,13 @@ int main() {
         // range-based for gets expanded into:
         [[maybe_unused]] auto it2 = ms.begin();
         //   1    2   2   3   4
-        //   ^    ^   ^   ^   ^    ^ 
+        //   ^    ^   ^   ^   ^    ^
         // begin                  end
         for (; it != ms.end(); ++it) {  // ++it faster than it++
             std::cout << " " << *it;
         }
         std::cout << "\n";
+        // All operations with iterators are O(1) amortized.
 
         ms.erase(ms.find(2));
         std::cout << ms.size() << "\n";
@@ -27,6 +28,7 @@ int main() {
         ms.erase(ms.find(2));  // UB
         std::cout << ms.size() << "\n";
 
-        // All operations with iterators are O(1) amortized.
+        std::multiset<int> ms2;
+        std::cout << (ms.end() == ms2.end()) << "\n";  // not guaranteed, may be 0
     }
 }

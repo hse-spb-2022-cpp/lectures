@@ -5,6 +5,7 @@ int main() {
     std::cout.precision(100);
 
     double x = 0.1;
+    std::cout << x << "\n";
     std::cout << 10 * x << "\n";
     std::cout << (x + x + x + x + x) + (x + x + x + x + x) << "\n";
     std::cout << x + x + x + x + x + x + x + x + x + x << "\n";
@@ -16,6 +17,11 @@ int main() {
     std::cout << log(10'000'000) / log(10) << "\n";
     std::cout << log(100'000'000) / log(10) << "\n";
     std::cout << log(1'000'000'000) / log(10) << "\n";
+    std::cout << log(1e10) / log(10) << "\n";
+    std::cout << log(1e11) / log(10) << "\n";
+    std::cout << log(1e12) / log(10) << "\n";
+    std::cout << log(1e13) / log(10) << "\n";
+    std::cout << log(1e14) / log(10) << "\n";
 
     std::cout << "=====\n";
     std::cout << static_cast<int>(log(1'000'000'000) / log(10)) << "\n";

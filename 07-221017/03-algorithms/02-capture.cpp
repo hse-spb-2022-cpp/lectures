@@ -15,6 +15,7 @@ int main() {
     int middle = 7;
 
     std::sort(v.begin(), v.end(), [&](int a, int b) {
+        // middle++;  // UB: not a comparator at all
         return std::abs(a - middle) < std::abs(b - middle);
     });
 

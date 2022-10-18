@@ -32,10 +32,11 @@ int main() {
     std::cout << m.count(500) << "\n";  // 1
 
     const auto &const_m = m;
-//    std::cout << const_m[123] << "\n";
+    // const_m.insert({12345, 67.89});
+    // std::cout << const_m[123] << "\n";
     std::cout << (*const_m.find(123)).second << "\n";
     std::cout << const_m.find(123)->second << "\n";
 
-    *const_m.find(843579875);  // UB, please compare with .end() first
     std::cout << (const_m.find(843579875) == const_m.end()) << "\n";  // not UB
+    *const_m.find(843579875);  // UB, please compare with .end() first
 }
