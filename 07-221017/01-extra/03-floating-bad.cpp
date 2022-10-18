@@ -19,9 +19,6 @@ int main() {
     std::cout << log(1'000'000'000) / log(10) << "\n";
     std::cout << log(1e10) / log(10) << "\n";
     std::cout << log(1e11) / log(10) << "\n";
-    std::cout << log(1e12) / log(10) << "\n";
-    std::cout << log(1e13) / log(10) << "\n";
-    std::cout << log(1e14) / log(10) << "\n";
 
     std::cout << "=====\n";
     std::cout << static_cast<int>(log(1'000'000'000) / log(10)) << "\n";

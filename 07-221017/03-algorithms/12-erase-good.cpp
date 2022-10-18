@@ -23,7 +23,7 @@ int main() {
         for (auto it = s.begin(); it != s.end(); ) {
             if (*it % 2 == 0) {
                 auto it_next = it;  // Или std::next()
-                it_next++;
+                ++it_next;
                 s.erase(it);
                 it = it_next;
             } else {

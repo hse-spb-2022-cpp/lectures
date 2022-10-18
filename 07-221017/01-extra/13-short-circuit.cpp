@@ -25,7 +25,7 @@ int main() {
     f(true) && g(true);
     std::cout << "====\n";
 
-    std::vector v;
+    std::vector<int> v;
     if (v.size() >= 10 && v[9] == 123) {  // safe!
         std::cout << "something\n";
     }

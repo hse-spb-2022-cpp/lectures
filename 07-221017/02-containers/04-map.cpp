@@ -12,7 +12,7 @@ int main() {
     m.insert({35, 40.1});
     m.emplace(44, 1.1);
 
-    for (std::pair<int, double> p : m) {
+    for (std::pair</*const*/int, double> p : m) {
         std::cout << p.first << " --> " << p.second << "\n";
         p.first += 100;  // WTF?
     }

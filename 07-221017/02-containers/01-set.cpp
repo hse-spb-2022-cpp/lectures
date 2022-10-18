@@ -11,6 +11,7 @@ int main() {
         }
         std::cout << "\n";
 
+        // All operations are O(log)
         s.insert(10);
         s.erase(2);
 

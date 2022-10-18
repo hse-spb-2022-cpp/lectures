@@ -14,7 +14,7 @@ int main() {
     for (int x : v) std::cout << " " << x;
     std::cout << "\n";
 
-    std::sort(v.begin(), v.end(), [](int a, int b) {
+    std::sort(v.begin(), v.end(), []([[maybe_unused]] int a, [[maybe_unused]] int b) {
         // operator<, total order (полный линейный порядок)
         return std::abs(a - 7) < std::abs(b - 7);
 //        return false;  // Ok: all elements are equal

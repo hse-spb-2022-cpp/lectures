@@ -18,7 +18,7 @@ int main() {
     // towards +inf
     std::cout << std::ceil(-2.8) << " " << std::ceil(-2.2) << " "
               << std::ceil(2.2) << " " << std::ceil(2.8) << "\n";
-    // towards nearest (almost)
+    // towards nearest
     std::cout << std::round(-2.8) << " " << std::round(-2.2) << " "
               << std::round(2.2) << " " << std::round(2.8) << "\n";
 
@@ -26,4 +26,5 @@ int main() {
     std::cout << std::round(-2.5) << " " << std::round(2.5) << "\n";
     std::cout << std::round(-1.5) << " " << std::round(1.5) << "\n";
     std::cout << std::round(-0.5) << " " << std::round(0.5) << "\n";
+    std::cout << std::round(-2.4999999999) << " " << std::round(2.499999999) << "\n";
 }
