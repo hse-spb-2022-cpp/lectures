@@ -26,15 +26,24 @@ void print(const Printable &p) {
     p.print();
 }
 
+std::vector<Printable*> create_vector() {
+    std::vector<Printable*> v;
+    Int *i = new Int;
+    i->x = 10;
+    v.push_back(i);
+
+    String *s = new String;
+    s->s = "hello";
+    v.push_back(s);
+    return v;
+}
+
 int main() {
-    // Printable p;
-    // p.print();
-
-    Int i;
-    i.x = 10;
-    print(i);
-
-    String s;
-    s.s = "hello";
-    print(s);
+    std::vector<Printable*> v = create_vector();
+    for (auto &el : v) {
+        print(*el);
+    }
+    for (auto el : v) {
+        delete v;
+    }
 }

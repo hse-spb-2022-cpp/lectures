@@ -7,7 +7,7 @@ struct Foo {
 
 Foo *create_foo() {
     Foo *f = new Foo;  // Dynamic storage duration for 'Foo'.
-                       // "На куче" (heap)
+                       // "На куче" (heap), не "бинарная куча"
     f->vec.resize(20);
     return f;
 }

@@ -28,11 +28,15 @@ int main() {
         vec.emplace_back(create_foo());  // No std::move needed
 
         auto f = create_foo();
-        vec.emplace_back(std::move(f));
+        // vec.emplace_back(f);
+
+        std::unique_ptr<Foo> g = std::move(f);
+        assert(f == nullptr);
+        vec.emplace_back(std::move(g));
 
         std::cout << vec[0]->v[4] << "\n";
         std::cout << vec[1]->v[4] << "\n";
-        std::cout << (f == nullptr) << "\n";
+        std::cout << (g == nullptr) << "\n";
     }
     std::cout << vec[0]->v[4] << "\n";
 }

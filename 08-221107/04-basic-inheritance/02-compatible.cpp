@@ -15,6 +15,7 @@ struct Derived : Base {
     }
 };
 
+// operator<<(std::ostream &os, ....)
 void foo_and_print(const Base &b) {
     b.foo();
     // b.bar();

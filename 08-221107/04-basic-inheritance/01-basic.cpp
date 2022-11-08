@@ -15,7 +15,7 @@ protected:
 };
 
 struct Derived : Base {  // Производный класс (derived). Дочерний/подкласс.
-    // Base base;  // better alternative: "composition"
+    // Base base;  // better alternative: композиция (composition)
     int y = 40;
     void bar() const {
         foo();
@@ -28,6 +28,7 @@ int main() {
     {
         Derived d;
         std::cout << "d.x=" << d.x << ", d.y=" << d.y << "\n";
+        d.x = 123;
         d.foo();
         d.bar();
         // int x = d.very_secret;

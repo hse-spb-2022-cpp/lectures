@@ -14,4 +14,7 @@ struct Foo {
 
 int main() {
     Foo{}.foo();
+
+    Foo f;
+    f.foo();  // this == &f
 }

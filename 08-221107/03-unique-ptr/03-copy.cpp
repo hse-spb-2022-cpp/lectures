@@ -10,24 +10,28 @@ struct Foo {
 
 int main() {
     {
-        Foo *f = new Foo;
         Foo *b = nullptr;
+        {
+            Foo *f = new Foo;
 
-        b = f;
-        std::cout << f->v[4] << "\n";
-        std::cout << b->v[4] << "\n";
+            b = f;
+            std::cout << f->v[4] << "\n";
+            std::cout << b->v[4] << "\n";
 
-        delete f;
+            delete f;
+        }
         // delete b;  // double free
     }
     {
-        auto f = std::make_unique<Foo>();
         std::unique_ptr<Foo> b;
+        {
+            auto f = std::make_unique<Foo>();
 
-        b = f;  // copy is prohibited.
-        b = std::unique_ptr<Foo>(f.get());  // copy, but will do double free
+            b = f;  // copy is prohibited.
+            b = std::unique_ptr<Foo>(f.get());  // copy, but will do double free
 
-        std::cout << f->v[4] << "\n";
+            std::cout << f->v[4] << "\n";
+        }
         std::cout << b->v[4] << "\n";
     }
 }

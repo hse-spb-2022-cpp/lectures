@@ -36,17 +36,20 @@ int main() {
         // 2. Can be changed.
         a.next = &b; b.prev = &a;  // `&` means 'take address of'
         b.next = &c; c.prev = &b;
+        // nodes[0].next = 1; nodes[1].prev = 0;
 
         // `*` means 'dereference', like with iterators
         std::cout <<   b      .data << "\n";  // world
         std::cout << (*a.next).data << "\n";  // world
         std::cout <<   a.next->data << "\n";  // world
 
-        a.next = &c;
+        a.next = &c; c.prev = &a;
+        b.prev = nullptr; b.next = nullptr;
         std::cout << (*a.next).data << "\n";  // wow
         std::cout <<   a.next->data << "\n";  // wow
 
         *a.prev;  // UB: dereference of nullptr
+        a.next + 1;
         a.next++;  // Possible, 'pointer arithemtics' ~ 'iterators', out of scope for now
     }
 }
