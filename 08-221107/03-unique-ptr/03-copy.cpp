@@ -20,7 +20,7 @@ int main() {
 
             delete f;
         }
-        // delete b;  // double free
+        delete b;  // double free
     }
     {
         std::unique_ptr<Foo> b;
@@ -28,7 +28,7 @@ int main() {
             auto f = std::make_unique<Foo>();
 
             b = f;  // copy is prohibited.
-            b = std::unique_ptr<Foo>(f.get());  // copy, but will do double free
+            // b = std::unique_ptr<Foo>(f.get());  // copy, but will do double free
 
             std::cout << f->v[4] << "\n";
         }

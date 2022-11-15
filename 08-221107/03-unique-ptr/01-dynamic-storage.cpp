@@ -13,12 +13,13 @@ Foo *create_foo() {
 }
 
 int main() {
-    Foo *f = create_foo();
     Foo &fref = *f;
+    Foo *f2 = &fref;
+    (*f).vec.resize(30);
     fref.vec.resize(30);
 
     delete f;  // Leak otherwise
-    // delete f;  // Double-free
+    // delete f;  // Double-free, UB
     f = nullptr;
     delete f;  // ok
 

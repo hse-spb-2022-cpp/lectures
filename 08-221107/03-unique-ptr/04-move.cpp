@@ -33,6 +33,7 @@ int main() {
         std::unique_ptr<Foo> g = std::move(f);
         assert(f == nullptr);
         vec.emplace_back(std::move(g));
+        assert(g == nullptr);
 
         std::cout << vec[0]->v[4] << "\n";
         std::cout << vec[1]->v[4] << "\n";

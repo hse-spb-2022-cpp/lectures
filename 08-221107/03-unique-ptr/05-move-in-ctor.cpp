@@ -6,7 +6,7 @@ struct Node {
     int value;
     std::unique_ptr<Node> next;
 
-    Node(int value_, std::unique_ptr<Node> next_)
+    Node(int value_, std::unique_ptr<Node> next_)  // TODO: why not Node*?
         : value(value_)
         , next(std::move(next_)) {
     }

@@ -24,5 +24,6 @@ struct DerivedNaive : Base {
 int main() {
     Derived d;
     assert(d.x == 10);
+
     // DerivedNaive dn(10);  // Конструкторы не наследуются.
 }

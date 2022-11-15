@@ -37,6 +37,7 @@ int main() {
         a.next = &b; b.prev = &a;  // `&` means 'take address of'
         b.next = &c; c.prev = &b;
         // nodes[0].next = 1; nodes[1].prev = 0;
+        // nodes[1].next = 2; nodes[2].prev = 1;
 
         // `*` means 'dereference', like with iterators
         std::cout <<   b      .data << "\n";  // world
@@ -47,6 +48,8 @@ int main() {
         b.prev = nullptr; b.next = nullptr;
         std::cout << (*a.next).data << "\n";  // wow
         std::cout <<   a.next->data << "\n";  // wow
+
+        // TODO: invalidation via push_back; iterator points to a address, objects are immovable
 
         *a.prev;  // UB: dereference of nullptr
         a.next + 1;

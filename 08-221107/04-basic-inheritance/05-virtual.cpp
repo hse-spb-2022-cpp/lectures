@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-struct Base {
+struct Base {  // at least one virtual method => 'polymorphic' class
     int x = 10;
 
     virtual void print() const {
@@ -29,6 +29,7 @@ int main() {
     d.print();
 
     print(d);
+    print(b);
 
     std::cout << sizeof(Base) << ", " << sizeof(Derived) << "\n";
 }
