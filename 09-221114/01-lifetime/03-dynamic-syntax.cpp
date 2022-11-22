@@ -10,7 +10,7 @@ struct Foo {
 };
 
 int main() {
-    // dynamic storage duration
+    // dynamic storage duration, "на куче"
     {
         Foo *f = new Foo;  // Foo f; // default initialization
         delete f;

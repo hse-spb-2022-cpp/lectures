@@ -6,7 +6,7 @@ void foo(bool condition, int n) {
     if (condition) {
         std::cout << "inside if\n";
         static std::vector<int> v(n);
-        //static std::vector<int> v((std::cout << "inited\n", n));
+        // static std::vector<int> v((std::cout << "inited\n", n));
 
         /*static std::vector<int> v;
         v.clear();

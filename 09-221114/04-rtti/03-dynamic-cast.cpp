@@ -20,7 +20,7 @@ void f(const Base &b) {
     // virtual method. Typically it's a virtual destructor.
     const Derived1 *d1 = dynamic_cast<const Derived1 *>(&b);
     if (d1)
-        std::cout << "Derived1\n";
+        std::cout << "Derived1 or SubDerived1\n";
     if (typeid(b) == typeid(Derived1))
         std::cout << "Exactly Derived1\n";
     // d1 is visible

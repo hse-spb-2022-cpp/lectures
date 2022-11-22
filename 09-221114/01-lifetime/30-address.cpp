@@ -12,6 +12,8 @@ int main() {
     std::cout << &z << "\n";
     std::cout << z << "\n";
 
+    std::cout << (&x1 == z) << "\n";  // ok
+
     // All are unspecified (undefined?) behavior
     std::cout << (&x1 < z) << "\n";
     std::cout << (&x1 < &x2) << "\n";
