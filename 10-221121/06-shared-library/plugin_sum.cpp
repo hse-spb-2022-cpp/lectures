@@ -1,6 +1,6 @@
 #include <boost/config.hpp>
 #include <iostream>
-#include "abstract_plugin.h"
+#include "abstract_plugin.hpp"
 
 namespace plugin_sum {
 class plugin_sum : public plugins_demo::abstract_plugin {

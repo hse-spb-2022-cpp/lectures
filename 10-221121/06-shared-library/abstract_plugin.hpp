@@ -1,5 +1,5 @@
-#ifndef PLUGIN_API_H_
-#define PLUGIN_API_H_
+#ifndef ABSTRACT_PLUGIN_HPP_
+#define ABSTRACT_PLUGIN_HPP_
 
 #include <boost/config.hpp>
 #include <string>
@@ -13,4 +13,4 @@ public:
 };
 }  // namespace plugins_demo
 
-#endif  // PLUGIN_API_H_
+#endif  // ABSTRACT_PLUGIN_HPP_

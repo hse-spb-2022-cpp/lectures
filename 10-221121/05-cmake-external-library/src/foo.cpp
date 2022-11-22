@@ -1,4 +1,4 @@
-#include "foo.h"
+#include "foo.hpp"
 #include <boost/filesystem/operations.hpp>
 #include <iostream>
 

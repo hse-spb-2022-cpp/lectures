@@ -1,6 +1,6 @@
 #include <boost/config.hpp>
 #include <iostream>
-#include "abstract_plugin.h"
+#include "abstract_plugin.hpp"
 
 void foo();  // Not implemented anywhere
 

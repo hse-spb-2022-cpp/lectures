@@ -3,7 +3,7 @@
 #include <boost/version.hpp>
 #include <iostream>
 #include <vector>
-#include "abstract_plugin.h"
+#include "abstract_plugin.hpp"
 
 #if BOOST_VERSION >= 107600
 #define boost_dll_import_symbol ::boost::dll::import_symbol
