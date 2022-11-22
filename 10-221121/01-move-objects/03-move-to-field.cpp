@@ -1,6 +1,11 @@
 #include <string>
 #include <utility>
 
+// A person not necessarily have a name:
+// https://github.com/kdeldycke/awesome-falsehood
+// https://habr.com/ru/post/431866/
+// https://t.me/c/1591098747/3404 https://www.youtube.com/watch?v=Z8SHvJnGUCM&ab_channel=AndreyGein
+
 struct PersonCpp03 {
     std::string name;
     PersonCpp03(const std::string &name_) : name(name_) {}  // 1 copy
