@@ -22,11 +22,11 @@ Types of binaries:
   * Can be loaded on demand. Examples: editor plugins, game mods.
     In Java/Python it's free.
 
+https://github.com/fffaraz/awesome-cpp
+
 How to configure:
 
 1. Set up include path. Either works or `-I/some/path` for GCC.
 2. Set up library binaries path. Either works or `-L/some/path` for GCC.
 3. Tell linker which libraries to use: `-lfoo` means `libfoo.a` or `foo.lib` depending on the compiler ("decorated")
 4. (optional) Put dynamic libraries next to the app or add them to the `PATH` so it can be found on startup.
-
-https://github.com/fffaraz/awesome-cpp

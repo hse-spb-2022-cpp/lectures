@@ -4,8 +4,8 @@
 
 struct Foo {
     static std::unique_ptr<Foo> make() {
-        // return std::make_unique<Foo>();  // bad
-        return std::unique_ptr<Foo>(new Foo());  // good
+        return std::make_unique<Foo>();  // bad
+        // return std::unique_ptr<Foo>(new Foo());  // good
     }
 
 private:

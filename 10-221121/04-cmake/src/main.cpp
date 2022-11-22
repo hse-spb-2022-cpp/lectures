@@ -2,5 +2,4 @@
 
 int main() {
     foo();
-    foo();
 }
