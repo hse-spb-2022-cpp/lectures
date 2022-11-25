@@ -2,8 +2,9 @@
 #include <vector>
 #include <string>
 
-struct Printable {  // 'abstract' class because at least one 'pure virtual' function
-    virtual void print() const = 0;  // pure virtual
+struct Printable {
+    virtual void print() const = 0;
+    virtual ~Printable() {};  // !!! VIRTUAL DESTRUCTOR
 };
 
 struct Int : Printable {
@@ -44,6 +45,6 @@ int main() {
         print(*el);
     }
     for (auto el : v) {
-        delete el;
+        delete el;  // No UB because virtual destructor is called
     }
 }

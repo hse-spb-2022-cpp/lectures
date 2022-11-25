@@ -44,6 +44,6 @@ int main() {
         print(*el);
     }
     for (auto el : v) {
-        delete el;
+        delete el;  // UB because incorrect destructor is called; Address Sanitizer, compiler warning
     }
 }

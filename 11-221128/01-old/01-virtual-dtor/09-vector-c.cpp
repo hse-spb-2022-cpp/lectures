@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 #include <vector>
 #include <string>
 
@@ -26,24 +27,22 @@ void print(const Printable &p) {
     p.print();
 }
 
-std::vector<Printable*> create_vector() {
-    std::vector<Printable*> v;
-    Int *i = new Int;
+std::vector<std::unique_ptr<Printable>> create_vector() {
+    std::vector<std::unique_ptr<Printable>> v;
+    std::unique_ptr<Int> i = std::make_unique<Int>();
     i->x = 10;
-    v.push_back(i);
+    v.push_back(std::move(i));
 
-    String *s = new String;
+    std::unique_ptr<String> s = std::make_unique<String>();
     s->s = "hello";
-    v.push_back(s);
+    v.push_back(std::move(s));
     return v;
 }
 
 int main() {
-    std::vector<Printable*> v = create_vector();
+    std::vector<std::unique_ptr<Printable>> v = create_vector();
     for (auto &el : v) {
         print(*el);
     }
-    for (auto el : v) {
-        delete el;
-    }
+    // UB because incorrect destructor is called; Address Sanitizer, gcc does not warn, clang does warn
 }
