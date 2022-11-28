@@ -13,7 +13,7 @@ const int M = 10000;
 int main() {
     std::mutex m;
     int data = 0;
-    auto worker = [&data, &m]() {
+    auto worker = [&]() {
         for (int i = 0; i < N; i++) {
             std::unique_lock l{m};
             data++;

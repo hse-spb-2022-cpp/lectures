@@ -9,7 +9,7 @@ const int M = 10000;
 
 int main() {
     std::atomic<int> data = 0;
-    auto worker = [&data]() {
+    auto worker = [&]() {
         for (int i = 0; i < N; i++) {
             data = data + 1;
         }
