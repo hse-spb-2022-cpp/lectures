@@ -1,3 +1,4 @@
+#include <cassert>
 #include <chrono>
 #include <iostream>
 #include <thread>
@@ -15,6 +16,7 @@ int main() {
     });
 
     while (data < 100) {}  // Hmm: data is always the same => loop is either infinite or never starts.
+    assert(data >= 100);
     std::cout << "done " << data << "\n";
     stop = true;
 

@@ -4,8 +4,8 @@
 
 #pragma GCC optimize ("O0")
 
-const int N = 50000000;
-const int M = 10000;
+const int N = 50'000'000;
+const int M = 10'000;
 
 int main() {
     std::atomic<int> data = 0;

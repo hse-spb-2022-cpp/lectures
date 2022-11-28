@@ -20,6 +20,7 @@ int main() {
     std::thread t2(worker);
     for (int i = 0; i < M; i++) {
         int data_snapshot = data;
+        // todo: example: copy vector
         if (data_snapshot % 2 == 0) {
             std::cout << "data is " << data_snapshot << " (in progress)\n";
         }

@@ -5,7 +5,6 @@
 #include <string>
 
 void writeln(const std::string &s) {
-    // MUTual EXclusion
     std::mutex m;
     m.lock();
     for (std::size_t i = 0; i < s.size(); i++) {
