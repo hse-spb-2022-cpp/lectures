@@ -133,10 +133,6 @@ inline void readWord( char *s ) {
 	int c = readChar();
 	while (c > 32) {
 		*s++ = c;
-
-		*s = c;
-		s++;
-
 		c = getChar();
 	}
 	*s = 0;

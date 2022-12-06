@@ -11,6 +11,7 @@ int main() {
     std::cout << data[2] << " " << *(dptr + 2) << "\n";  // 3
     dptr += 2;
     std::cout << data[1] << " " << *(dptr - 1) << "\n";  // 2
+    std::cout << data[1] << " " << *(dptr + (-1)) << "\n";  // 2
     std::cout << data[1] << " " << dptr[-1] << "\n";  // 2
     std::cout << data[1] << " " << (-1)[dptr] << "\n";  // 2
 

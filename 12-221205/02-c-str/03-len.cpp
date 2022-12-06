@@ -4,15 +4,16 @@
 #include <iterator>
 #include <iostream>
 
-char botva[10];
+int botva[10];
 
 bool has_a(const char *str) {
 //    for (std::size_t i = 0; i < std::strlen(str); i++) {
+//    for (std::size_t i = 0, len = std::strlen(str); i < len; i++) {
     for (std::size_t i = 0; str[i]; i++) {
         if (str[i] == 'a') {
             return true;
         }
-        botva[0] = 'x';
+        botva[0] = 123;
     }
     return false;
 }
