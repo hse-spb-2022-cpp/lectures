@@ -43,7 +43,7 @@ int main() {
     for (auto &el : v) {
         print(*el);
     }
-    for (auto el : v) {
+    for (Printable *el : v) {
         delete el;
     }
 }
