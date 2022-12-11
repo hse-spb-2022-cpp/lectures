@@ -1,0 +1,3 @@
+Book "Design Patterns" from "Gang of Four"/GoF/"Банда четырёх" (Gamma et al): https://ru.wikipedia.org/wiki/Design_Patterns
+
+Please don't do like that: https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
