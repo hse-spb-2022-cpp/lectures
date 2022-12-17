@@ -47,3 +47,4 @@ int main() {
         std::cout << "c.index = " << c.index << "\n";  // Should be 14
     }
 }
+// todo: lower_bound example which counts calls

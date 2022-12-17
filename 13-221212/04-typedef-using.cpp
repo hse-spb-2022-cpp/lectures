@@ -15,5 +15,5 @@ int main() {
     std::cout << typeid(v2).name() << "\n";
 
     pii p1(10, 20);
-    std::pair<int, int> &p2 = p1;
+    [[maybe_unused]] std::pair<int, int> &p2 = p1;
 }

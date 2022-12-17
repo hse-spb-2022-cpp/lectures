@@ -14,6 +14,7 @@ struct CloserTo {
 int main() {
     std::set<int, CloserTo> v1({1, 2, 3, 4, 5, 6, 7, 8}, CloserTo{3});  // Copies CloserTo() inside
     std::set<int, CloserTo> v2({1, 2, 3, 4, 5, 6, 7, 8}, CloserTo{7});
+    v1.insert(1000);  // Uses the same comparator.
     for (int x : v1) {
         std::cout << x << "\n";
     }
@@ -24,7 +25,7 @@ int main() {
     std::cout << "=====\n";
 
     // v1 = v2;
-    // v1 = std::set(v1.begin(), v1.end(), CloserTo{5});
+    v1 = std::set(v1.begin(), v1.end(), CloserTo{5});
     for (int x : v1) {
         std::cout << x << "\n";
     }

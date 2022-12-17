@@ -18,18 +18,28 @@ struct BigFunctor {
     }
 };
 
-int main() {
-    [[maybe_unused]] std::function<bool(int, int)> cmp1 = CloserTo();
-    std::cout << sizeof(CloserTo) << " " << sizeof(cmp1) << "\n";
+char not_exact(char a, char b) {
+    return a + b;
+}
 
-    [[maybe_unused]] std::function<bool(int, int)> cmp2 = BigFunctor();
-    std::cout << sizeof(BigFunctor) << " " << sizeof(cmp1) << "\n";
+int main() {
+    std::function<bool(int, int)> cmp = CloserTo{10};
+    std::cout << cmp(3, 200) << "\n";  // 1
+    std::cout << sizeof(CloserTo) << " " << sizeof(cmp) << "\n";
+
+    cmp = BigFunctor();
+    std::cout << cmp(3, 4) << "\n";  // 1
+    std::cout << sizeof(BigFunctor) << " " << sizeof(cmp) << "\n";
 
     int x = 10;
-    [[maybe_unused]] std::function<bool(int, int)> cmp3 = [&](int a, int b) {
+    cmp = [&](int a, int b) {
         return a + x < b + x;
     };
-    std::cout << sizeof(cmp3) << "\n";
+    std::cout << cmp(100, 101) << "\n";  // 1
+    std::cout << sizeof(cmp) << "\n";
+
+    cmp = not_exact;  // Also OK. Hmmm.
+    std::cout << cmp(10, 20) << "\n";  // 1
     
     // Type Erasure (need basic templates): https://www.youtube.com/watch?v=tbUCHifyT24
 }

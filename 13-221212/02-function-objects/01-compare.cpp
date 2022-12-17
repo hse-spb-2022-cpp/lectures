@@ -23,6 +23,7 @@ int main() {
     assert(!g(4, 5));
     assert(Greater().operator()(4, 5));
     assert(Greater()(4, 5));
+    // assert(Greater(4, 5));  // compilation error
 
     sort(v.begin(), v.end(), g /* Greater() */);
     for (int x : v) {

@@ -50,8 +50,9 @@ struct Foo {
             std::cout << "in lambda 3: local_var new = " << local_var << "\n";
         };
         lambda3();
+        lambda3();
         std::cout << "sizeof(lamda3) == " << sizeof(lambda3) << "\n";
-        assert(member_var == 12);  // Changed.
+        assert(member_var == 13);  // Changed.
         assert(local_var == 30);  // Unchanged.
 
         // 4
@@ -60,26 +61,26 @@ struct Foo {
             member_var++;  // this->member_var, this is const.
             local_var++;  // local_var is a reference, the reference itself is always const.
         }();
-        assert(member_var == 13);
+        assert(member_var == 14);
         assert(local_var == 31);
 
         // 5
         std::cout << "before lambda 5: " << &member_var << " " << &local_var << "\n";
         auto lambda5 = [=, *this]() mutable {  // C++17: [*this, local_var]: full copy of '*this', including unused 'arr'.
             std::cout << "in lambda 5    : " << &member_var << " " << &local_var << "\n";
-            assert(member_var == 13); // 'this' is fully copied.
+            assert(member_var == 14); // 'this' is fully copied.
             assert(local_var == 31);
             member_var++;
             local_var++;
         };
         lambda5();
         std::cout << "sizeof(lambda5) == " << sizeof(lambda5) << "\n";
-        assert(member_var == 13);  // Unchanged.
+        assert(member_var == 14);  // Unchanged.
         assert(local_var == 31);  // Unchanged.
 
         // 6
         [wtf = local_var + member_var]() {  // C++14
-            assert(wtf == 44);
+            assert(wtf == 45);
         }();
         [local_var = local_var * 2]() {
             assert(local_var == 62);
@@ -87,9 +88,9 @@ struct Foo {
         assert(local_var == 31);
 
         // 7
-        [&local_var = local_var]() {  // Shortcut: [&local_var] (even in C++11)
-            assert(local_var == 31);
-            local_var++;
+        [&lvar = local_var]() {
+            assert(lvar == 31);
+            lvar++;
         }();
         assert(local_var == 32);
         [&local_var = std::as_const(local_var)]() {

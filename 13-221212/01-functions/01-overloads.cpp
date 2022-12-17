@@ -5,7 +5,7 @@ void println(int x) {
     std::cout << x << "\n";
 }
 
-void println(double x) {
+void println(double x) {  // Removing this overload resolves ambiguity
     std::cout << x << "\n";
 }
 
@@ -26,6 +26,6 @@ int main() {
     println(10);
     println(1.2);
     println(std::vector{1, 2, 3});
-//    println(123456789123456);
+    println(123456789123456);
     println(1LL);
 }

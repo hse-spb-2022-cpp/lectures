@@ -8,7 +8,7 @@ bool compare_gt(int a, int b) {
 }
 
 int main() {
-    std::set<int, bool(*)(int, int)> v({1, 2, 3, 4, 5, 6, 7, 8}, compare_gt);
+    std::set<int, bool(*)(int, int)> v({1, 2, 3, 4, 5, 6, 7, 8}, compare_gt /* &compare_gt */);
     for (int x : v) {
         std::cout << x << "\n";
     }

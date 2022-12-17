@@ -12,6 +12,7 @@ void foo(node*) {
 }
 
 int main() {
+    [[maybe_unused]] node *x = 0;
     foo(0);
     foo(NULL);
     foo(nullptr);  // C++11
