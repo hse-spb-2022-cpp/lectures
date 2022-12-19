@@ -14,7 +14,7 @@ int main() {
 
     std::cout << (&x1 == z) << "\n";  // ok
 
-    // All are unspecified (undefined?) behavior
+    // All are unspecified behavior (returns _something_, but not guaranteed to be consistent).
     std::cout << (&x1 < z) << "\n";
     std::cout << (&x1 < &x2) << "\n";
 

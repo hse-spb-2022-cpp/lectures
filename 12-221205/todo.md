@@ -3,3 +3,4 @@
 
 Do not use json-c, as it is complicated stuff which includes `shared_ptr` semantics? Something `unique_ptr`-like with `clone` is better.
 Maybe libcurl? Or some hashing? Both provide examples of creating an 'instance of a library' and very low-level stuff, which may be counterintuitive.
+01-c-arrays: what pointers are comparable with == or >= (different)
