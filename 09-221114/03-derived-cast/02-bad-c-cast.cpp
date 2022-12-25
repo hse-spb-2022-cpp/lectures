@@ -20,7 +20,7 @@ void foo(const Base &b) {
     std::cout << "foo(" << b.x << ")\n";
     const Derived &d = static_cast<const Derived&>(b);
 //    const std::string &d = static_cast<const std::string&>(b);  // UB, but does not compile
-//    const std::string &d = (const std::string&)b;  // UB
+//    const std::string &d = (const std::string&)b;  // UB, do not use c-style cast
     std::cout << ".s=" << d.s << "\n";
 }
 
