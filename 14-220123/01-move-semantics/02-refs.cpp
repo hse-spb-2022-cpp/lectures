@@ -21,6 +21,7 @@ int main() {
     std::move(x);  // xvalue
 
     // lvalue references, can only bind to lvalue
+    // int &x0 = /* prvalue */ 10;
     int &x1 = /* should be lvalue */ ((((x))));
     int &x2 = /* should be lvalue */ foo();
     // int &x3 = /* prvalue, CE */ bar();
@@ -32,15 +33,16 @@ int main() {
     int &&y2 = /* prvalue */ bar();  // lifetime extension: lifetime of the temporary is extended to lifetime of y2
     int &&y2b = /* xvalue */ std::move(/* prvalue */ bar());  // no lifetime extension, accessing y2b is UB.
         // One should never move(prvalue).
-    int &&y3 = /* xvalue */ std::move(x);
+    int &&y3 = /* xvalue */ std::move(/* lvalue */ x);
     // int &&y4 = /* lvalue, CE */ x;
 
     // const lvalue references, can bind anywhere for historical reasons.
     // "Rvalue lifetime disaster": https://www.youtube.com/watch?v=zzkpTbJiFPM
     const int &z1 = /* lvalue */ x;
     const int &z2 = /* prvalue */ 10;  // lifetime extension
+    const int &z2b = /* xvalue */ std::move(bar());  // no lifetime extension
     const int &z3 = /* xvalue */ std::move(x);  // move(x) == static_cast<int&&>(x)
-    const int &z4 = bar();  // lifetime extension
+    const int &z4 = /* prvalue */ bar();  // lifetime extension
 
     // Also possible, but mostly useless.
     const int &&zz1 = 10;

@@ -9,7 +9,6 @@ void apply(F operation) {
 
 struct Print {
     int printed = 0;
-    // std::ref
 
     void operator()(int x) {
         std::cout << x << "\n";

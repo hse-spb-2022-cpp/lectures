@@ -36,7 +36,8 @@ int main() {
         [[maybe_unused]] templ_foo<std::set<int>> x;
         std::set<int> s;
         x.value = s.begin();
-//        x.foo(s);
+        // x.foo(s);
     }
-//    [[maybe_unused]] templ_foo<int> y;
+    // [[maybe_unused]] templ_foo<int> y;
+    // [[maybe_unused]] templ_foo<templ_foo<std::vector<int>>> z;
 }

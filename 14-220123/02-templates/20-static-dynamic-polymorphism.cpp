@@ -40,8 +40,10 @@ std::unique_ptr<AbstractContainer> create_container() {
 
 int main() {
     std::vector<int> vec;
-    // vec's type is known
+    std::list<int> lst;
+    // vec's and lst's types are known
     std::cout << is_empty(vec) << "\n";
+    std::cout << is_empty(lst) << "\n";
 
     std::unique_ptr<AbstractContainer> cont = create_container();
     // `cont` can be anything depending on create_container()

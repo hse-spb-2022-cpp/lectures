@@ -26,5 +26,6 @@ int main() {
     apply/*<Print>*/(Print{});
     apply/*<Print>*/(Print{});
     apply/*<PrintTwice>*/(PrintTwice{});
+    apply/*<SOMETHING>*/([](int x) { std::cout << "lambda: " << x << "\n"; });
     // apply(12);
 }

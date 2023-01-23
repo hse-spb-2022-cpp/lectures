@@ -9,19 +9,19 @@ void swap(T &a, T &b) {
     b = std::move(tmp);
 }
 
-struct uncopyable {
-    uncopyable() = default;
-    uncopyable(const uncopyable &) = delete;
-    uncopyable(uncopyable &&) = delete;
-    uncopyable &operator=(const uncopyable &) = delete;
-    uncopyable &operator=(uncopyable &&) = delete;
-    ~uncopyable() = default;
+struct unmovable {
+    unmovable() = default;
+    unmovable(const unmovable &) = delete;
+    unmovable(unmovable &&) = delete;
+    unmovable &operator=(const unmovable &) = delete;
+    unmovable &operator=(unmovable &&) = delete;
+    ~unmovable() = default;
 };
 
 int main() {
     int x, y;
     swap(x, y);
 
-    uncopyable a, b;
+    unmovable a, b;
     swap(a, b);
 }

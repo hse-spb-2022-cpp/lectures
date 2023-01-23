@@ -6,9 +6,11 @@ struct Foo {
         std::cout << "Foo() " << this << "\n";
     }
 
-    // https://en.cppreference.com/w/cpp/language/rule_of_three
+    // Outdated: https://en.cppreference.com/w/cpp/language/rule_of_three
+    //
     // Rule of zero: do not implement any of these.
     // https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rc-zero
+    //
     // Rule of five: if one is implemented, implement all five.
     // https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#c21-if-you-define-or-delete-any-copy-move-or-destructor-function-define-or-delete-them-all
     Foo(const Foo &other) {  // copy constructor: direct init, copy init...
@@ -54,6 +56,8 @@ int main() {
 
     b = /* lvalue */ d;
     b = /* xvalue */ std::move(d);
+    b = /* xvalue */ static_cast<Foo&&>(d);
+    b = /* prvalue*/ Foo{};
 
     std::cout << "===== call 1 =====\n";
     call_by_value(/* lvalue */ a);

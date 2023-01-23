@@ -71,6 +71,7 @@ int main() {
     10;
     get_value();
     get_value() + 20;
+    get_ref() + 20;
     &a;
     static_cast<int>(10.5);
     // `this` is also a prvalue.
@@ -79,7 +80,10 @@ int main() {
     // xvalue: will expire soon, but has name
     std::move(vec);
     std::move(vec)[9];
+    std::move(vec[9]);
     std::move(s).x;
+    std::move(arr);
+    std::move(arr)[0];
     static_cast<std::vector<int>&&>(vec);  // std::move is almost exactly that.
     get_rvalue_ref();
 }

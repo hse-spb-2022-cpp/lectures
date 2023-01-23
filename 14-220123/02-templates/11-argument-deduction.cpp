@@ -19,5 +19,7 @@ int main() {
     // template argument deduction
     swap(x, y);  // Arg1=int, Arg2=int => T = int
     // swap(x, z);  // compilation error: deduced conflicting types for T
-    foo(std::vector<double>{}, std::vector<float>{});  // T=double, U=float
+
+    foo(std::vector<int>{}, std::vector<short>{});  // T=int, U=short
+    foo(std::vector<int>{}, std::vector<int>{});  // T=int, U=int
 }

@@ -10,8 +10,9 @@ void swap(T &a, T &b) {
 }
 
 int main() {
-    int x, y;
-    [[maybe_unused]] short z;
+    int x = 1, y = 2;
     swap<int>(x, y);
+
+    [[maybe_unused]] short z = 3;
     swap<int>(x, z);  // compilation error: cannot bind int& to short
 }
