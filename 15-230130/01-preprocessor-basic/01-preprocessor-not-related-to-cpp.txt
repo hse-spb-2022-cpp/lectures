@@ -1,0 +1,7 @@
+Run `g++ -xc++ -E 01-preprocessor-not-related-to-cpp.txt`
+
+This file is not a valid C++ code. However, the preprocessor still works:
+Phases 1-6: https://en.cppreference.com/w/cpp/language/translation_phases
+
+#include "included-text.txt"
+#include "included-text.txt"
