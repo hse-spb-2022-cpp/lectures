@@ -3,7 +3,8 @@
 // CMakeLists.txt: target_compile_definitions(main PUBLIC -DSOME_VAR)
 // g++ -DSOME_VAR
 #define SOME_VAR
-// TODO: Empty value
+
+#define VALUE 123
 
 int main() {
     #ifdef SOME_VAR
@@ -12,7 +13,10 @@ int main() {
     std::cout << "SOME_VAR was not defined\n";
     #endif
 
-    #if defined(SOME_VAR) && 1 >= 2
+    std::cout << VALUE << "\n";
+    // std::cout << SOME_VAR << "\n";  // SOME_VAR is replaced with nothing
+
+    #if defined(SOME_VAR) && 1 >= 2 && VALUE == 120 + 3
     std::cout << "x\n";
     #endif
 
