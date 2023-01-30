@@ -24,7 +24,7 @@ int main() {
     #ifdef __cplusplus
     std::cout << "We are C++\n";
     #else
-    std::cout << "We are not C++???\n";
+    std::cout << "We are not C++???\n";  // TODO: trigraphs?
     // Preprocessor warning/error commands: https://en.cppreference.com/w/cpp/preprocessor/error
     // #error Compiling with C is not supported  // Supported
     // #warning Compiling with C is badly supported  // Supported, official standard since C++23
