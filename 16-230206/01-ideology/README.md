@@ -5,6 +5,9 @@ John Lakos "Defensive Programming Done Right":
 https://www.youtube.com/watch?v=1QhtXRMp3Hg
 https://www.youtube.com/watch?v=tz2khnjnUx8
 
+think-cell's error reporting:
+https://youtu.be/Cmud1jO__VA?t=2318
+
 Любая обработка ошибок — это часть алгоритма, контракта и инвариантов программы!
 Нет никакого способа добавить обработку ошибок в общем случае, все инструменты языка (те же исключения) — это лишь инструменты.
 Если обработка ошибок важна, её тоже надо продумывать и тестировать.
