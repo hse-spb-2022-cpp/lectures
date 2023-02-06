@@ -23,13 +23,13 @@ int main() {
 
     try {
         throw my_runtime_error();
-    } catch (std::exception &e) {
+    } catch (const std::exception &e) {
         std::cout << e.what() << "\n";
     }
 
     try {
         throw my_runtime_error();
-    } catch (std::runtime_error &e) {
+    } catch (const std::runtime_error &e) {
         std::cout << e.what() << "\n";
     }
 }

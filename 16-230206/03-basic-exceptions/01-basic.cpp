@@ -46,5 +46,7 @@ int main() {
         // 1. How exactly the format is invalid? We could add it to the exception.
         // 2. We don't have much context here: what exactly failed? A or B?
         // 3. We don't have that context in read_vector() either.
+        // Consequence: this is probably not a great error handling.
+        //              Not because of exceptions per se, but because we did not think _in advance_.
     }
 }

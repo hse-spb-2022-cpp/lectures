@@ -15,6 +15,5 @@ int main() {
         std::cout << "2\n";
     } catch (...) {  // Exceptions only. Not UB, not assertions!
         std::cout << "3\n";
-        // throw;  // rethrow current exception
-    }  // no 'finally' block!
+    }
 }

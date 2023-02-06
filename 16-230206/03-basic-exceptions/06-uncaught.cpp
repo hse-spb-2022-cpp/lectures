@@ -47,7 +47,7 @@ int main() {
     try {
         foo();
     } catch (...) {
-        throw;
+//        throw;
     }
     std::cout << "main end\n";
 }

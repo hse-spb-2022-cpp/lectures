@@ -14,13 +14,13 @@ void check_file(const std::string &filename) {
     }
     for (;;) {
         int x = -239;
-        int read = fscanf(f, "%d", &x);  // Still easy to forget to check.
+        int read = std::fscanf(f, "%d", &x);  // Still easy to forget to check.
         std::cout << "    x = " << x << ", read = " << read << ", errno = " << errno << " " << std::strerror(errno) << "\n";
         if (read != 1) {
             break;
         }
     }
-    fclose(f);
+    std::fclose(f);
 }
 
 int main() {

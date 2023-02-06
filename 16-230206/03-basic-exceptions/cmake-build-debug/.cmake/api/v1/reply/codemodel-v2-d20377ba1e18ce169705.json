@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "03_basic_exceptions",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "02-destructors::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-02-destructors-Debug-2752088d5503e67a9179.json",
+					"name" : "02-destructors",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "05-complex-try-block::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-05-complex-try-block-Debug-ce1bfb0a979b4e05ca32.json",
+					"name" : "05-complex-try-block",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "F:/yeputons/Documents/teach/hse-spb-2022-cpp/lectures/16-230206/03-basic-exceptions/cmake-build-debug",
+		"source" : "F:/yeputons/Documents/teach/hse-spb-2022-cpp/lectures/16-230206/03-basic-exceptions"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

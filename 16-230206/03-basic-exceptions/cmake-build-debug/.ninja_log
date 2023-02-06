@@ -1,0 +1,10 @@
+# ninja log v5
+2	119	6973787256781947	build.ninja	d405e125ef0562c7
+2	231	6973780657570322	CMakeFiles/02-destructors.dir/02-destructors.cpp.obj	84f7e04570fb6850
+231	298	6973780658211406	02-destructors.exe	187b5e7195fcd18b
+0	236	6973787304977903	CMakeFiles/05-complex-try-block.dir/05-complex-try-block.cpp.obj	f06d8401b8856eeb
+236	313	6973787305711124	05-complex-try-block.exe	1a75a01fde0c5ce4
+2	213	6973787462709388	CMakeFiles/05-complex-try-block.dir/05-complex-try-block.cpp.obj	f06d8401b8856eeb
+213	275	6973787463300324	05-complex-try-block.exe	1a75a01fde0c5ce4
+2	233	6973789000134599	CMakeFiles/05-complex-try-block.dir/05-complex-try-block.cpp.obj	f06d8401b8856eeb
+233	299	6973789000764754	05-complex-try-block.exe	1a75a01fde0c5ce4
