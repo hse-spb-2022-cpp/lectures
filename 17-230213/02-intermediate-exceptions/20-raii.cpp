@@ -20,4 +20,7 @@ int main() {
     }
     // Jargon: 'RAII' may only mean part 2: destructor cleans up everything.
     // Constructing object is less strict, see ifstream.
+
+    // Other languages: `finally` block or special 'try-with-resources'
+    // syntax (Java) or `with` statement (Python). In Go: `defer` statement.
 }
