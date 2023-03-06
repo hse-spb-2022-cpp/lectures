@@ -1,11 +1,11 @@
 Different styles of writing networking (not only) code: https://stackoverflow.com/a/31298006/767632
 Actually, any code with two participants, e.g. your program and the networking library.
 
-Typically APIs only support one style, sometimes both.
+Typically APIs only support one style, sometimes all.
 
 # Blocking
 You call a function, it does something and returns the result.
-May _block_ for a while or indefinitely.
+May _block_ your thread for a while or indefinitely.
 Sometimes you may ask it to do multiple things and/or not block more than _a timeout_.
 
 ```
@@ -58,7 +58,7 @@ In Qt you have to manually connect signals with slots.
 ## In libraries
 ```
 int main() {
-    s1.startReadingInt([](int x) {
+    s1.startReadingInt([&](int x) {
         cout << "Read from s1: " << x;
         s1.startReadingInt([&](int y) {
             cout << "Read from s1: " << x << " " << y;

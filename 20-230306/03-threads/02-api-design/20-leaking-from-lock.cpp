@@ -10,12 +10,7 @@ private:
     std::vector<T> v;
 
 public:
-    void push_back(const T &x) {
-        std::unique_lock l(m);
-        v.push_back(x);
-    }
-
-    void push_back(T &&x) {
+    void push_back(T x) {
         std::unique_lock l(m);
         v.push_back(std::move(x));
     }
@@ -27,7 +22,7 @@ public:
     }
 };
 
-void print_head(atomic_vector<int> v) {
+void print_head(const atomic_vector<int> &v) {
     std::cout << v[0] << "\n";
 }
 
