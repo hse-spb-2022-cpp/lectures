@@ -1,0 +1,2 @@
+Strict aliasing rule часто нарушают.
+Много кода требует себе `-fno-strict-aliasing`.
