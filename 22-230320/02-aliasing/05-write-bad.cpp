@@ -7,5 +7,5 @@ int main() {
 
     int *xptr = reinterpret_cast<int*>(xc);
     std::cout << std::hex << *xptr /* UB */ << "\n";
-    // T1 == int, T2 == char. Нельзя.
+    // T1 == int, T2 == char[]. Нельзя.
 }

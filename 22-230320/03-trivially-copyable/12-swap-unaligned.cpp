@@ -23,6 +23,8 @@ int main() {
     s.a = 30;  // No references, the compiler knows that `s.a` is unaligned.
     std::cout << s.a << " " << s.b << "\n";  // No references because operator<< takes by value.
     std::swap(s.a, s.b);  // Unaligned references to `int`: UB, undefined sanitizer is right.
+    std::cout << s.a << " " << s.b << "\n";  // No references because operator<< takes by value.
     [[maybe_unused]] int *aptr = &s.a;  // Unaligned pointer to `int`: UB, no undefined sanitizer warning :(
     *aptr = 40;
+    std::cout << s.a << " " << s.b << "\n";  // No references because operator<< takes by value.
 }

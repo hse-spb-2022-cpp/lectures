@@ -3,7 +3,7 @@
 
 #pragma pack(push, 1)
 struct Foo {
-//    char x;
+    char x;
     std::vector<int> v;
 };
 #pragma pack(pop)
