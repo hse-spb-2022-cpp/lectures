@@ -13,6 +13,7 @@ struct alignas(0x10000) Person {  // Overaligned type
 int main() {
     std::allocator<Person> alloc;
     Person *people = alloc.allocate(4);  // Already aligned and of correct type: https://stackoverflow.com/a/46400243/767632
+    Person *people2 = alloca.allocate(5);
 
     Person *a = new (people) Person();
     Person *b = new (people + 1) Person();
@@ -24,5 +25,7 @@ int main() {
     b->~Person();
     a->~Person();
 
+    // alloc.deallocate(people2, 4);  // UB
+    alloc.deallocate(people2, 5);
     alloc.deallocate(people, 4);
 }

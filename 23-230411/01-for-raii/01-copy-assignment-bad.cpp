@@ -9,7 +9,7 @@ struct str {
     char *data;
 
 public:
-    str() : data(nullptr) {
+    str() : capacity(0), data(nullptr) {
     }
 
     str(const char *other)

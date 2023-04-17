@@ -5,6 +5,7 @@
 struct Person {
     const int id;
     std::string &name;
+    // vptr as well
 
     Person(int id_, std::string &name_) : id(id_), name(name_) {
         std::cout << "Person created\n";
@@ -24,6 +25,7 @@ int main() {
     Person *a = new (buf) Person(10, name1);
     std::cout << a->id << std::endl;  // 10
     std::cout << a->name << std::endl;  // Alex
+    std::cout << buf[0].id << std::endl;  // 10, const
     a->~Person();
 
     Person *b = new (buf) Person(11, name2);
@@ -35,6 +37,7 @@ int main() {
     std::cout << a->id << std::endl;  // 11? UB? I dunno :(
     std::cout << buf[0].id << std::endl;  // 11? UB? I dunno :(
     std::cout << std::launder(&buf[0])->id << std::endl;  // 11. Not UB.
+    std::cout << buf[0].id << std::endl;  // 11? UB? I dunno :(
     b->~Person();
 
     // We do NOT try to deeply understand or use `std::launder`.

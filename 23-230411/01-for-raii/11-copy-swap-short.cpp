@@ -28,12 +28,12 @@ public:
           data(std::exchange(other.data, nullptr)) {
     }
 
-    str &operator=(str other) {
-        // Cannot call `std::swap` or `operator=`.
+    str &operator=(str other) noexcept {
+        // Cannot call `operator=`, `std::swap(*this)`.
         std::swap(capacity, other.capacity);
         std::swap(data, other.data);
         // Hence: either 1 copy ctor + swap, or 1 move ctor + swap.
-        // Pros: short to implement, works.
+        // Pros: short to implement, provides strong exception safety.
         // Cons: suboptimal performance.  What if we don't need to reallocate?  Self-assignment?
         return *this;
     }

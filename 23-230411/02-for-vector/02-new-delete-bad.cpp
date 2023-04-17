@@ -1,3 +1,4 @@
+#include <cstddef>
 #include <iostream>
 #include <memory>
 #include <string>
@@ -12,6 +13,7 @@ struct alignas(0x10000) Person {  // Overaligned type
 
 int main() {
     char *memory = new char[sizeof(Person) * 4];
+    std::cout << alignof(std::max_align_t) << "\n";
     // Alignment is only up to `max_align_t`: https://stackoverflow.com/q/10587879/767632
 
     Person *people = reinterpret_cast<Person*>(memory);

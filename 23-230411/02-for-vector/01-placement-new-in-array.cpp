@@ -21,7 +21,7 @@ int main() {
     std::cout << static_cast<void*>(memory) << " " << a << " " << b << " " << c << std::endl;
     std::cout << a->first_name.size() << std::endl;
 
-    // Order is not important, but I prefer to minic automatic storage duration.
+    // Order is not important, but I prefer to mimic automatic storage duration.
     c->~Person();
     b->~Person();
     a->~Person();

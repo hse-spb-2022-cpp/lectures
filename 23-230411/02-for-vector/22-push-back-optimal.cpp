@@ -12,7 +12,12 @@ struct stub_vector {
 
     void push_back(const T &value) {
         new (&(*this)[size]) T(value);
-        ++size;  // What if T() calls `size()`?  What if T() throws?
+        ++size;
+    }
+
+    void push_back(T &&value) {
+        new (&(*this)[size]) T(std::move(value));
+        ++size;
     }
 
     ~stub_vector() {
@@ -26,5 +31,5 @@ int main() {
     stub_vector<std::string> vec;
     std::string foo = "hello";
     vec.push_back(foo);  // 1 copy
-    vec.push_back(std::string(10'000, 'x'));  // 1 creation, 1 copy
+    vec.push_back(std::string(10'000, 'x'));  // 1 creation, 1 move
 }

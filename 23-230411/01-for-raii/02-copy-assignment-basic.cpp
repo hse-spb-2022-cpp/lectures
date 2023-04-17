@@ -42,8 +42,8 @@ public:
         capacity = 0;
         data = nullptr;
         // Now we are in a correct state.
-        capacity = other.capacity;
         data = capacity ? new char[capacity] : 0;  // Throws?
+        capacity = other.capacity;
         std::strcpy(data, other.data);
         return *this;
     }

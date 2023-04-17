@@ -7,6 +7,10 @@ struct my_vector {
     T *data;
 
     const T &operator[](std::size_t i) const {
+        // Possible:
+        // if (i >= len) {
+        //    throw ....;
+        // }
         return *(data + i);
     }
     T &operator[](std::size_t i) {
@@ -20,13 +24,13 @@ template<typename T>
 struct my_vector_bad {
     T *data;
 
-    const T &operator[](std::size_t i) const {
-        // More dangerous: what if `this` is actually const and `operator[]` actually changes it?
-        // Not UB, though.
-        return const_cast<my_vector_bad*>(*this)[i];
-    }
     T &operator[](std::size_t i) {
         return *(data + i);
+    }
+    const T &operator[](std::size_t i) const {
+        // More dangerous: what if `this` is actually const and `operator[]` actually changes it?
+        // Not UB? Not sure.
+        return const_cast<my_vector_bad&>(*this)[i];
     }
 };
 

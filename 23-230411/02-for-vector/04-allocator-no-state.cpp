@@ -16,6 +16,7 @@ int main() {
     // Does approximately the following:
 
     Person *people = std::allocator<Person>().allocate(4);
+    Person *people2 = std::allocator<Person>().allocate(5);
 
     Person *a = new (people) Person();
     Person *b = new (people + 1) Person();
@@ -27,5 +28,9 @@ int main() {
     b->~Person();
     a->~Person();
 
+    // std::allocator<Person>().deallocate(people2, 4);  // UB
+    std::allocator<Person>().deallocate(people2, 5);
     std::allocator<Person>().deallocate(people, 4);
+
+    // Better allocators with state: https://bloomberg.github.io/bde/white_papers/index.html
 }
