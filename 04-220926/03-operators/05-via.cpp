@@ -21,6 +21,8 @@ public:
     }
 };
 
+// TODO: forward declaration or add another example (e.g. * and *=)
+
 bigint &operator-=(bigint &lhs, const bigint &rhs) {
     return lhs = lhs - rhs;
 }
