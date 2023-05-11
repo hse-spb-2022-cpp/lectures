@@ -27,5 +27,6 @@ int main() {
 
     std::cout << &d1 << "\n";
     std::cout << &b1 << "\n";
-    std::cout << dynamic_cast<void*>(&b1) << "\n";
+    std::cout << dynamic_cast<void*>(&b1) << "\n";  // "most derived object"
+    // Usage: custom memory deallocation
 }

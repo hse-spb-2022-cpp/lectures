@@ -6,7 +6,7 @@ Class diagram:
 
       Person
        ^  ^
-      /    \
+    v./    \v.
      /      \
  Employee Student
     ^        ^

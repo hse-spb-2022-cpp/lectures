@@ -3,6 +3,32 @@
 #include <utility>
 
 // Diamond problem: https://isocpp.org/wiki/faq/multiple-inheritance#mi-diamond
+/*
+Class diagram:
+
+ Person   Person
+    ^        ^
+    |        |
+ Employee Student
+    ^        ^
+     \      /
+      \    /
+   MagicStudent
+
+But we want a single Person!
+
+      Person
+       ^  ^
+      /    \
+     /      \
+ Employee Student
+    ^        ^
+     \      /
+      \    /
+   MagicStudent
+*/
+
+
 struct Person {
     std::string name;
     Person(std::string name_) : name(std::move(name_)) {}
@@ -32,31 +58,6 @@ void hi_student(Student &s) {
 void hi_magic(MagicStudent &ms) {
     std::cout << "Wow, " << ms.name << " does not exist!\n";  // FIXME: ambiguous base
 }
-
-/*
-Class diagram:
-
- Person   Person
-    ^        ^
-    |        |
- Employee Student
-    ^        ^
-     \      /
-      \    /
-   MagicStudent
-
-But we want a single Person!
-
-      Person
-       ^  ^
-      /    \
-     /      \
- Employee Student
-    ^        ^
-     \      /
-      \    /
-   MagicStudent
-*/
 
 int main() {
 }

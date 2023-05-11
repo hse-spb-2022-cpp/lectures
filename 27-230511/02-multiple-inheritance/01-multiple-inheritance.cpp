@@ -44,7 +44,7 @@ Layout is guaranteed, exact sizes and padding vary:
 */
 
 int main() {
-   Song s;
+   alignas(0x100) Song s;
    [[maybe_unused]] auto f1 = s.bpm;
    [[maybe_unused]] auto f2 = s.text;
    // [[maybe_unused]] auto x = s.date;  // ambiguous member, clang++ has good error message, `using Music::date` won't help for some reason.
@@ -69,4 +69,5 @@ int main() {
    std::cout << &l << " " << &lp << " " << sizeof(l) << " " << sizeof(lp) << "\n";
    std::cout << &l.date << " " << &l.text << "\n";
    std::cout << "  downcast: " << &l << " --> " << &static_cast<Song&>(l) << "\n";
+   // !!! static_cast changes value of the pointer
 }

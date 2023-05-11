@@ -30,4 +30,5 @@ int main() {
     point a(1, 2), b(3, 10);
     point c = a + b;
     std::cout << c.x << " " << c.y << "\n";
+    std::cout << sizeof(point) << "\n";  // My modern compiler: still 8 bytes, not 12 (EBO).
 }

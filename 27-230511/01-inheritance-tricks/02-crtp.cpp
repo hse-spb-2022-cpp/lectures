@@ -12,7 +12,6 @@ protected:
     }
 
 public:
-
     void writeInt(int value) {
         static_assert(CHAR_BIT == 8);
         for (int i = 0; i < 4; i++) {
@@ -27,7 +26,7 @@ public:
     }
 };
 
-struct OstreamWriter : RichWriter<OstreamWriter> {  // CRTP
+struct OstreamWriter : RichWriter<OstreamWriter> {  // CRTP: Curiously Recurring Template Pattern
 private:
     std::ostream &m_os;
 
@@ -55,6 +54,11 @@ public:
 // Do not have a "common" type for `RichWriter`s, need templates.
 template<typename RW>
 void writeHello(RW &w) {
+    w.writeString("hello\n");
+}
+
+template<typename T>
+void writeHello2(RichWriter<T> &w) {
     w.writeString("hello\n");
 }
 

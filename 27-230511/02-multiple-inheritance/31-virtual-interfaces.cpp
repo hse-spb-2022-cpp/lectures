@@ -5,7 +5,7 @@
 // Extra reading: https://isocpp.org/wiki/faq/multiple-inheritance#mi-not-evil
 
 // Interfaces: inheritance from interface is always virtual
-struct Object {
+struct Object {  // TODO: QObject
     int id() const { return id_; }
     virtual ~Object() {}
 

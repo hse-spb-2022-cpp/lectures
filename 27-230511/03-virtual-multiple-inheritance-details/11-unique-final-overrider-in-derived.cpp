@@ -23,13 +23,18 @@ struct Y : virtual Base {
 struct Derived : X, Y {  // ok: Derived::foo() calls X::foo() + Y::foo(), Y::bar()
     void foo() override {
         std::cout << "Derived::foo()\n";
-        X::foo();
-        Y::foo();
+        X::foo();  // non virtual call
+        Y::foo();  // non virtual call
     }
 };
 
 int main() {
     Derived d;
     d.foo();
+    std::cout << "=====\n";
     d.bar();
+    std::cout << "=====\n";
+    static_cast<Base&>(d).foo();  // Derived::foo()
+    std::cout << "=====\n";
+    d.X::foo();  // non virtual call
 }

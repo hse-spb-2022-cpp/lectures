@@ -25,7 +25,7 @@ struct Scanner : IntReader {
 // Implements multiple interfaces
 struct Variable : IntWriter, IntReader {
 private:
-    int m_value;
+    int m_value = 0;
 public:
     void write(int value) override { m_value = value; }
     int read() override { return m_value; }

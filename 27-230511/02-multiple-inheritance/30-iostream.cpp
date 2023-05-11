@@ -30,11 +30,11 @@ int main() {
          /   \
         /     \
     istream ostream
-        \     /
-         \   /
-        iostream
-           |
-      stringstream
+        \     /   \
+         \   /     \
+        iostream    \
+           |         \
+      stringstream   ostringstream
     */
     std::ios &base = s2;
     std::cout << static_cast<bool>(base) << "\n";

@@ -7,6 +7,7 @@ public:
 
     void writeInt(int value) {
         static_assert(CHAR_BIT == 8);
+        static_assert(sizeof(value) == 4);
         for (int i = 0; i < 4; i++) {
             writeChar((value >> (8 * i)) & 0xFF);
         }
