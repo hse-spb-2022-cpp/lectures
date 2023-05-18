@@ -2,7 +2,7 @@
 #include <utility>
 
 using vi1 = std::vector<int>;
-typedef std::vector<int> vi2;
+typedef std::vector<int> vi2;  // Like variable declaration, prepended 'typedef'.
 
 // v<T> = std::vector<T>;
 template<typename T>

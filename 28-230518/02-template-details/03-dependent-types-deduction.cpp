@@ -11,6 +11,11 @@ bool is_begin2(typename C::iterator) {  // Impossibe to deduce C from 'C::iterat
     return true;
 }
 
+template<typename It>
+bool is_begin2_fixed(It) {  // OK
+    return true;
+}
+
 struct not_vector { using iterator = typename std::vector<int>::iterator; };
 
 int main() {

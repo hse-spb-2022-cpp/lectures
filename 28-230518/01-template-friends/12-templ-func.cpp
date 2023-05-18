@@ -21,7 +21,4 @@ int main() {
 
     foo(val1, weird);
     foo(val2, weird);
-
-    bar(val1, val1);
-    // bar(val1, weird);  // T=int, U=void
 }

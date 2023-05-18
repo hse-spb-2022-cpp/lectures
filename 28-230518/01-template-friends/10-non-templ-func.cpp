@@ -9,6 +9,7 @@ private:
     // (2) For all T: generate an independent non-template non_simple_func(MyTemplate<T>&) declaration, impossible to define outside the class in general.
     // Warning.
     friend void non_simple_func(MyTemplate&);
+    // friend void non_simple_func(MyTemplate<T>&);
 };
 
 void simple_func() {

@@ -9,7 +9,7 @@ struct Foo {
     }
 
     template<int Value2>
-    Foo(const Foo<T, Value2> &) {
+    Foo(const Foo<T, Value2> &) {  // `Value2 + 0` already breaks
         std::cout << Value2 << " --> " << Value << std::endl;
     }
 

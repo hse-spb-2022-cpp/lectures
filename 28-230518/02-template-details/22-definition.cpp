@@ -13,7 +13,7 @@ void Foo<T>::foo(const Foo &) {
 }
 
 template<typename T>
-Foo<T> Foo<T>::create_foo() {
+Foo<T> Foo<T>::create_foo() {  // careful: <T> is omitted only after ::
 }
 
 template<typename T>

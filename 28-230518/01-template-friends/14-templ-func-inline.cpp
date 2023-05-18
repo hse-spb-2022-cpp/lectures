@@ -10,13 +10,15 @@ private:
         val.x = 10;
         weird.x = 10;  // Should not compile when T != U because it's not a friend of MyTemplate<T>. Both GCC and Clang agree.
     }
+
+    // Friends of MyTemplate<U>:
+    // template<typename U2> void bar(MyTemplate<U>&, MyTemplate<U2>&);
 };
 
 int main() {
     MyTemplate<int> val1;
     MyTemplate<char> val2;
-    MyTemplate<void> weird;
 
     bar(val1, val1);  // T=int, U=int
-    // bar(val1, weird);  // T=int, U=void
+    // bar(val1, val2);  // T=int, U=char
 }

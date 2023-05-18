@@ -32,7 +32,7 @@ int main() {
     foo(Derived1());
     foo(Derived2());
     foo<int>(Derived3());
-    //foo(Derived3());  // compilation error: ambiguous base, even though Base<double> is private
+    // foo(Derived3());  // compilation error: ambiguous base, even though Base<double> is private
 
     BaseConstructorTag<int> t;
     [[maybe_unused]] const Base<int> &tref = t;
