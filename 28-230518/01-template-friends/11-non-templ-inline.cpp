@@ -8,6 +8,7 @@ private:
     friend void non_templ_friend(MyTemplate &val, MyTemplate<void> &weird) {
         val.x = 10;
         weird.x = 10;  // Should not compile, but GCC compiles it anyway. Clang does not.
+        // See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=109923
     }
 };
 
