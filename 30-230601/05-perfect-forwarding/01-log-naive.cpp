@@ -35,6 +35,7 @@ template<typename Arg, typename Fn>
 void log(Fn fn, Arg arg) {
     std::cout << "start\n";
     fn(std::move(arg));
+    // fn(arg);  // bad as well
     std::cout << "end\n";
 }
 
@@ -42,7 +43,7 @@ int main() {
     log(foo, 10);
 
     int x = 20;
-    // log(bar, x);  // compilation error :(
+    log(bar, x);  // compilation error :(
     log(bar, std::ref(x));  // Requires std::ref at call place
     std::cout << "x = " << x << "\n";
 

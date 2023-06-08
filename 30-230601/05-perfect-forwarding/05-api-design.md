@@ -13,6 +13,5 @@ E.g. passing a reference to a new thread is dangerous:
 ```c++
 void some_thread(std::vector<int> vec, int &x) { .... }
 int y = 5;
-std::thread t1(some_thread, create_vector(), y);  // ok: `y` is copied.
 std::thread t2(some_thread, create_vector(), std::ref(y));  // bad: temporary likely dies before the thread starts.
 ```

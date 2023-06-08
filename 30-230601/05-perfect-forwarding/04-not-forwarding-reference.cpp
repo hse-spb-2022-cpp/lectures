@@ -10,4 +10,5 @@ struct my_vector {
 
 template<typename T>
 void foo(my_vector<T> &&) {  // not forwarding reference: argument is always rvalue, `T` cannot affect this
+    // TODO: example for SFINAE
 }

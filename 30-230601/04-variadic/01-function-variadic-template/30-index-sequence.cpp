@@ -5,6 +5,7 @@
 
 template<typename ...Ts, std::size_t ...Is>
 void print_helper(const std::tuple<Ts...> &t, std::index_sequence<Is...>) {
+    // Ts = {int, double, const char*}, Is = {0, 1, 2}
     bool first = true;
     auto f = [&](const auto &v) {
         if (first) {
@@ -33,12 +34,13 @@ void print(const std::tuple<Ts...> &t) {
 
     // Step 4 in C++20:
     auto print_helper_lambda = [&]<std::size_t ...Is>(std::index_sequence<Is...>) {
+        (std::get<Is>(t), ...);
         // ...
     };
     print_helper_lambda(std::make_index_sequence<sizeof...(Ts)>{});
 }
 
 int main() {
-    std::tuple t{1, 2.3, "hello"};
+    std::tuple t{1, 2.3, "hello"};  // tuple<int, double, const char*>
     print(t);
 }

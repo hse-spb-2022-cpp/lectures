@@ -16,6 +16,8 @@ const auto &get(const tuple<Ts...> &t) {
     // Since C++17
     if constexpr (I == 0) return t.head;
     else                  return get<I - 1>(t.tail);
+
+    // Before C++17: classes only (TODO), because there are no partial specializations for functions.
 }
 
 int main() {
