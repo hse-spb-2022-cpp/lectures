@@ -5,7 +5,7 @@
 int main() {
     const char *s1 = "{\"field\":\"value\",\"arr\":[1,2,3.5]}";
     const char *s2 = "[1,2,3.5]";
-    printf("s1=%s, s2=\n", s2);
+    printf("s1=%s, s2=%s\n", s1, s2);
 
     struct json_object *obj1 = json_tokener_parse(s1);
     struct json_object *obj2 = json_tokener_parse(s2);
