@@ -38,4 +38,6 @@ int main() {
     std::vector<int> v{1, 2, 3};
     sort(v.begin(), v.end());  // v.begin() ~ std::vector<int>::iterator ~(?) int*
     // Better: std::sort
+    // Probably not guaranteed at all: https://stackoverflow.com/questions/6803556/do-custom-container-iterators-guarantee-adl-to-consider-namespace-std
+    // See https://quuxplusone.github.io/blog/2022/03/03/why-isnt-vector-iterator-just-t-star/
 }
