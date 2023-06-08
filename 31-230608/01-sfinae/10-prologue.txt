@@ -1,0 +1,14 @@
+Multiple SFINAE techniques are demonstrated next.
+They can be used to solve any SFINAE-related problem you want.
+No need to use only `retval` to help with the error message.
+
+We use SFINAE to "remove" some overloads from overload set.
+It's useful when:
+* We know that there may be better overloads, but it's impossible to tell based on the signature.
+* We know that this overload may not work and would like to report that immediately.
+
+In C++20 a strictly better alternative is concepts. Specifically, the `requires` keyword and constraints.
+https://www.cppstories.com/2021/concepts-intro/
+https://habr.com/ru/company/yandex_praktikum/blog/556816/
+https://habr.com/ru/post/495396/
+Hard level: https://habr.com/ru/company/jugru/blog/467299/
